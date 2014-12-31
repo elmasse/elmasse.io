@@ -1,0 +1,26 @@
+.contact {
+    
+    fieldset {
+        border: none;
+    }
+
+    label,
+    input,
+    textarea,
+    button {
+        display: block;
+        padding: 10px 0;
+        width: 100%;
+        border: none;
+    }
+
+    .field {
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    button {
+        margin: 30px 0px;
+        line-height: 45px;
+    }
+
+}

@@ -1,0 +1,28 @@
+---
+layout: page
+title: Contact
+description: Have questions, comments? 
+category: contact
+permalink: /contact/
+---
+
+<link rel="stylesheet" href="{{ "/resources/css/contact.css" | prepend: site.baseurl }}">
+
+
+<form class="form form-contact">
+    <fieldset>
+        <label for="name">Name</label>
+        <input name="name" placeholder="Your Name" class="field">
+        <label for="email">Email</label>
+        <input name="email" placeholder="Your E-mail" class="field">
+        <label for="subject">Subject</label>
+        <input name="subject" placeholder="Subject" class="field">
+        <label for="message">Message</label>
+        <textarea name="message" placeholder="Your Message" class="field"></textarea>
+        <button>Send</button>
+    </fieldset>
+    
+</form>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/resources/js/contact-form.js"></script>
