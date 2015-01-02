@@ -23,13 +23,6 @@
     height: $header-height;
     vertical-align: middle;
 
-    //float: left;
-    //position: absolute;
-    //top: 0;//100px;
-    //display: table;
-    //vertical-align: middle;
-    //height: 100%;
-
     &,
     &:visited {
         color: $nav-text-color;
@@ -41,6 +34,15 @@
         font-size: 90px;
         font-weight: 600;
         text-shadow: 0 0 10px #654;
+
+        @include media-query($on-palm) {
+            letter-spacing: 1px;
+            line-height: 40px;
+            font-size: 48px;
+            font-weight: 600;
+            text-shadow: 0 0 5px #654;
+
+        }
     }
 }
 
@@ -71,54 +73,7 @@
             padding-bottom: 9px; 
        }
     }
-/*
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-        }
-    }
-   */ 
 }
-
-
 
 
 /**
