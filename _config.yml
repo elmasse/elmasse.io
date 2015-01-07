@@ -10,5 +10,5 @@ google_plus_username: MaximilianoFierro
 linkedin_username: maximilianofierro
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 permalink: none
