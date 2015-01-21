@@ -33,16 +33,20 @@
         line-height: 82px;
         font-size: 90px;
         font-weight: 600;
-        text-shadow: 0 0 10px #654;
+        text-shadow: 0 0 10px $grey-color-dark;
 
         @include media-query($on-palm) {
             letter-spacing: 1px;
             line-height: 40px;
             font-size: 48px;
             font-weight: 600;
-            text-shadow: 0 0 5px #654;
+            text-shadow: 0 0 5px $grey-color-dark;
 
         }
+    }
+
+    .subheading {
+        text-shadow: 0 0 10px $grey-color-dark;
     }
 }
 
