@@ -15,7 +15,10 @@ description: JavaScript and more.
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-        <p>{{ post.excerpt }}</p>
+        <p>
+          {{ post.excerpt }}
+           <a href="{{ post.url | prepend: site.baseurl }}">Read more...</a>
+        </p>
       </li>
     {% endfor %}
   </ul>
