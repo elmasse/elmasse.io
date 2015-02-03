@@ -25,26 +25,56 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-google-plus:before {
-    content: "\ea8a";
+.icon-google-plus{
+    &:before {
+        content: "\ea8a";
+    }
+    &:hover{
+        color: #DB4A37;
+    }
 }
 
-.icon-facebook:before {
-    content: "\ea8e";
+.icon-facebook{
+    &:before {
+        content: "\ea8e";
+    }
+    &:hover {
+        color: #3B5998;
+    }   
 }
 
-.icon-twitter:before {
-    content: "\ea93";
+.icon-twitter{
+    &:before {
+        content: "\ea93";
+    }
+    &:hover {
+        color: #4099FF;
+    }
 }
 
-.icon-feed:before {
-    content: "\ea96";
+.icon-feed{
+    &:before {
+        content: "\ea96";
+    }
+    &:hover{
+        color: #FF6200;
+    }
 }
 
-.icon-github:before {
-    content: "\eab1";
+.icon-github{
+    &:before {
+        content: "\eab1";
+    }
+    &:hover{
+        color: #CCC;
+    }
 }
 
-.icon-linkedin:before {
-    content: "\eac8";
+.icon-linkedin{
+    &:before {
+        content: "\eac8";
+    }
+    &:hover{
+        color: #2768A8;
+    }
 }
