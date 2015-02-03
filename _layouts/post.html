@@ -1,21 +1,23 @@
 ---
 layout: default
 ---
+
 <div class="post">
 
-  <header class="post-header">
+  <header class="post-header">    
     <p>
     <span class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
     {% for tag in page.tags %}
         <span class="post-tag">{{ tag }}</span>
-    {% endfor %}  
-    </p>
+    {% endfor %}
+    </p>    
   </header>
 
   <article class="post-content">
     {{ content }}
   </article>
-
+  
 </div>
 
 <div class="disclaimer">{{ site.disclaimer }}</div>
+{% include social-post.html %}
