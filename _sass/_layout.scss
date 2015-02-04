@@ -152,6 +152,11 @@
         text-decoration: none;
         color: $text-color;
     }
+
+    a.read-more,
+    a.read-more:visited {
+        color: $brand-color;
+    }
 }
 
 .post-meta {
