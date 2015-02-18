@@ -1,3 +1,5 @@
+@import "mixins";
+
 /**
  * Site header
  */
@@ -5,11 +7,9 @@
     border-top: 2px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-dark;
     min-height: 56px;
-
-    height: $header-height;
-    background: url("../img/bg-5.jpg") scroll center center / cover transparent;
-  
-    // Positioning context for the mobile navigation icon
+    
+    @include radial-gradient(#555A5F, #212121);
+    
     position: relative;
 }
 
@@ -18,9 +18,9 @@
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
-    
+    padding: 90px 0;
     display: table-cell;
-    height: $header-height;
+    
     vertical-align: middle;
 
     &,
@@ -34,18 +34,12 @@
         font-size: 90px;
         font-weight: 600;
         text-shadow: 0 0 10px $grey-color-dark;
-
-        @include media-query($on-palm) {
-            letter-spacing: 1px;
-            line-height: 40px;
-            font-size: 48px;
-            font-weight: 600;
-            text-shadow: 0 0 5px $grey-color-dark;
-
-        }
     }
 
     .subheading {
+        // letter-spacing: 2px;
+        line-height: 65px;
+        font-size: 72px;
         text-shadow: 0 0 10px $grey-color-dark;
     }
 }
@@ -196,10 +190,6 @@
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
 }
 
 .post-content {
@@ -207,26 +197,14 @@
 
     h2 {
         font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
     }
 
     h3 {
         font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
     }
 
     h4 {
         font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
     }
 }
 

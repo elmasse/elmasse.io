@@ -19,18 +19,20 @@
 
 .home {
     .site-header {
-        background: url("../img/bg-1.jpg") scroll center center / cover transparent;
+        //@include radial-gradient(#555A5F, #000000);
+        // @include radial-gradient(#f85, #c30);
+        // @include radial-gradient(#444, #181818);
     }
 }
 
 .about {
     .site-header {
-        background: url("../img/bg-4.jpg") scroll center center / cover transparent;
+        // @include radial-gradient(#444, #181818);    
     }
 }
 
 .contact {
     .site-header {
-        background: url("../img/bg-4.jpg") scroll center center / cover transparent;
+        //background: url("../img/bg-4.jpg") scroll center center / cover transparent;
     }
 }
