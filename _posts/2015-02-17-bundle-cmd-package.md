@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "elmasse-bundle: A Sencha Cmd Package"
-categories: packages
+categories: extjs
 tags: [extjs, cmd, i18n, package]
 ---
 
@@ -52,7 +52,7 @@ Edit the `app/Application.js` file to add the require (\#1) and define the bundl
 
 >app/Application.js
 
-```
+```js
 Ext.define('MyApp.Application', {
     extend: 'Ext.app.Application',
     name: 'MyApp',
@@ -91,7 +91,7 @@ Almost there. We have all configured now, so we can start using our bundle. We c
 
 > app/Application.js
 
-```
+```js
     launch: function () {
         console.log(this.bundle.getMsg('message'));
     }
@@ -102,7 +102,7 @@ This will print in the console the value of the message defined in our Applicati
 
 But we can also use the `lazy` definition in our views. Modify the `app/view/main/Main.js` around line 32:
 
-```
+```js
     // ...
     items: [{
         xtype: 'panel',
