@@ -12,3 +12,5 @@ linkedin_username: maximilianofierro
 # Build settings
 markdown: redcarpet
 permalink: none
+
+highlighter: pygments
