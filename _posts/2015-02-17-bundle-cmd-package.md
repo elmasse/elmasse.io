@@ -3,6 +3,7 @@ layout: post
 title:  "elmasse-bundle: A Sencha Cmd Package"
 categories: extjs
 tags: [extjs, cmd, i18n, package]
+comments: true
 ---
 
 The `Ext.i18n.Bundle` project is now available as a **Sencha Cmd Package**. The latest working version for ExtJS 5.1 is published in my public package repository.
