@@ -393,4 +393,5 @@ node server.js
 
 Point your browser to [http://localhost:3000/](http://localhost:3000/) and login using **hello** as username and **world** as password. Then refresh the page and you should not be prompted to enter your user again.
 
-
+## Code
+All the code is available on [ext-jwt-test](https://github.com/elmasse/ext-jwt-test) github repository.
