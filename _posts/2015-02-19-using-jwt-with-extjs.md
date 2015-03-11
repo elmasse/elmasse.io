@@ -86,7 +86,7 @@ app.post('/authenticate', function (req, res) {
     });
 });
 
-//@endpoint [/api/news]
+//@endpoint [/api/bookmarks]
 //@method GET
 app.get('/api/bookmarks', function (req, res) {
 
