@@ -233,7 +233,7 @@ Ext.define('Bookmarks.view.login.LoginController', {
 
 ### Bookmarks Grid and Store
 
-Our Main view will hold a grig where we are going to show the data from the server. The Store will be defined into a ViewModel and the ViewController will be responsible to set the token for the authorization header
+Our Main view will hold a grid where we are going to show the data from the server. The Store will be defined into a ViewModel and the ViewController will be responsible to set the token for the authorization header
 
 > app/view/main/Main.js
 
