@@ -51,14 +51,16 @@ console.log(MyClass.isTestable) // false
 You can read more from the proposal about how to define property decorators.
 
 ## Applying Mixins Declaratively
-One of the things I really like is to use Mixins (actually not mixins but traits, but we will talk about it later in this post). In ES5 we can merge prototypes using `Object.assign`:
+One of the things I really like is to use Mixins (actually not mixins but traits, but we will talk about it later in this post). In ES5 we can merge prototypes using an `Object.assign` polyfill, underscore or lodash (_.extend):
 
 ```js
+var assign = requires('object.assign');
+
 function Foo () {};
 Foo.prototype.foo = function() { console.log('foo'); };
 
 function MyClass () {}
-Object.assign(MyClass.prototype, Foo.prototype);
+assign(MyClass.prototype, Foo.prototype);
 
 var obj = new MyClass();
 obj.foo(); // 'foo'
@@ -179,7 +181,7 @@ To solve the conflict we can exclude the foo method we don't need or create an a
 
 ```js
 
-import {traits, excludes } from 'cocktail.next'
+import { traits, excludes } from 'cocktail.next'
 
 // Trait as a Class
 class TFoo () {
