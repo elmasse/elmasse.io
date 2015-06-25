@@ -209,7 +209,7 @@ Basically the bind operator allow us to execute a given method as it were part o
 In order to use these particular functionality we need to enable stage 0 from babel experimental features.
 
 ## Final Words
-I really like the idea of decorators and bind operator. I think they are pretty helpfull specially to write cleaner and more maintainable code.
+I really like the idea of decorators and bind operator. I think they are pretty helpful specially to write cleaner and more maintainable code.
 
 
 
