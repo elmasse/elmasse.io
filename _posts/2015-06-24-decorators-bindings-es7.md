@@ -54,7 +54,7 @@ You can read more from the proposal about how to define property decorators.
 One of the things I really like is to use Mixins (actually not mixins but traits, but we will talk about it later in this post). In ES5 we can merge prototypes using an `Object.assign` polyfill, underscore or lodash (_.extend):
 
 ```js
-var assign = requires('object.assign');
+var assign = require('object.assign');
 
 function Foo () {};
 Foo.prototype.foo = function() { console.log('foo'); };
