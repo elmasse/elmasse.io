@@ -115,20 +115,22 @@ obj.foo() // 'foo'
 
 ```
 
+**Update:** I run accross this npm module [mixins-decorator](https://www.npmjs.com/package/mixins-decorator) which already provides this functionality, plus, it makes class defined methods to take precedence over mixins (which is better than the simplest solution presented here).
+
 ## Traits
 I mentioned before I really like the idea of Traits. While mixins are ok, there are sometimes when you need a bit more control on what you want to merge. Traits allow us to avoid any name collision between the functionality that is being merged. We can exclude methods from a given Trait, or change the name of the method using aliases.
 
-The only thing that is required is that a Trait **does not define state**.
+The only thing that is required is that **a Trait does not define state**.
 
-The good part is we can use ES6 classes as Traits. 
+The good part is **we can use ES6 classes as Traits**. 
 
 I have been working on [CocktailJS](http://cocktailjs.github.io), a library to define annotations, traits and classes in a more **declarative** way. So, with all this new functionality as decorators, I wanted to review the library in itself and see if we can do something simpler.
 
-The answer is *yes, of course we can*! Check [cocktail.next](https://github.com/CocktailJS/cocktail.next)! This is an experimental library to use decorators and bind-operators.
+The answer is *yes, of course we can*! Check [traits-decorator](https://github.com/CocktailJS/traits-decorator)! This is an experimental library to use decorators and bind-operators.
 
 ```js
 
-import {traits } from 'cocktail.next'
+import {traits } from 'traits-decorator'
 
 // Trait as a Class
 class TFoo () {
@@ -155,7 +157,7 @@ We wil have an error if any of the Traits or even the host class have a name col
 
 ```js
 
-import {traits } from 'cocktail.next'
+import {traits } from 'traits-decorator'
 
 // Trait as a Class
 class TFoo () {
@@ -181,7 +183,7 @@ To solve the conflict we can exclude the foo method we don't need or create an a
 
 ```js
 
-import { traits, excludes } from 'cocktail.next'
+import { traits, excludes } from 'traits-decorator'
 
 // Trait as a Class
 class TFoo () {
