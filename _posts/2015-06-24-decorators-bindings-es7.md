@@ -133,7 +133,7 @@ The answer is *yes, of course we can*! Check [traits-decorator](https://github.c
 import {traits } from 'traits-decorator'
 
 // Trait as a Class
-class TFoo () {
+class TFoo {
     foo() { console.log('foo') }
 }
 
@@ -143,7 +143,7 @@ const TBar = {
 }
 
 @traits(TFoo, TBar)
-class MyClass () { }
+class MyClass { }
 
 let obj = new MyClass()
 obj.foo() // foo
@@ -151,7 +151,7 @@ obj.bar() // bar
 ```
 
 ### Conflicts
-We wil have an error if any of the Traits or even the host class have a name collision:
+We will have an error if any of the Traits or even the host class have a name collision:
 
 > name collision on method foo
 
@@ -160,7 +160,7 @@ We wil have an error if any of the Traits or even the host class have a name col
 import {traits } from 'traits-decorator'
 
 // Trait as a Class
-class TFoo () {
+class TFoo {
     foo() { console.log('foo') }
 }
 
@@ -171,11 +171,19 @@ const TBar = {
 }
 
 @traits(TFoo, TBar)
-class MyClass () { }
+class MyClass { }
 //....
 ```
 
-This will give you an error since we have the method `foo` defined twice in `TFoo` and `TBar`. Traits makes the developer responsible to solve this conflict in opossite to mixins where TFoo's `foo` will be overriden by TBar's foo.
+```
+index.js:36
+    throw new Error('Method named: ' + methodName + ' is defined twice.');
+          ^
+Error: Method named: foo is defined twice.
+...
+```
+
+This will give you an error since we have the method `foo` defined twice in `TFoo` and `TBar`. Traits makes the developer responsible to resolve this conflict in opposite to mixins where TFoo's `foo` will be overriden by TBar's foo.
 
 To solve the conflict we can exclude the foo method we don't need or create an alias to change the name:
 
@@ -186,7 +194,7 @@ To solve the conflict we can exclude the foo method we don't need or create an a
 import { traits, excludes } from 'traits-decorator'
 
 // Trait as a Class
-class TFoo () {
+class TFoo {
     foo() { console.log('foo') }
 }
 
@@ -197,7 +205,7 @@ const TBar = {
 }
 
 @traits(TFoo, TBar::excludes('foo'))
-class MyClass () { }
+class MyClass { }
 
 let obj = new MyClass()
 obj.foo() // foo
