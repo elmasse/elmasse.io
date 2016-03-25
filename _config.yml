@@ -10,7 +10,4 @@ google_plus_username: MaximilianoFierro
 linkedin_username: maximilianofierro
 
 # Build settings
-markdown: redcarpet
 permalink: none
-
-highlighter: pygments
