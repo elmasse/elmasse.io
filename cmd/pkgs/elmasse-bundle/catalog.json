@@ -19,6 +19,51 @@
           "signature": "MVouF9xw80dUrJKlq8F+yneFLu2vbY4i5iLxF1jGxcsIPawZ/BuMdFF5Romp7GkfSn/3mLJtPxK8exUf9otvy1XdvTWke00smbQDkmLQf3y7gjuSHDToF90vV382Z0HxOXnO4p6u5Hc1fAvNvRWxFSH83YfC9Wr5DkWN+9RVErZc6MUKCpMogECN4ZKwgeleuhFbTPyMFa8oOeovbfgMCptqp3qnG4nna+hnZtutERAMn2I5Ux+BSMh4aXWtlM4WQmR4IWtox6Uq7qDHo3aqvs9VWv3xniAgw/GeNQVK5TVMpcofgT35T2FcfkNamATEBlWv0SFOeqV9XR44RridJg\u003d\u003d"
         }
       ]
-    }
+    },
+    {
+      "name": "elmasse-bundle",
+      "namespace": "elmasse.i18n",
+      "format": "1",
+      "version": "1.1.0",
+      "compatVersion": "1.0.0",
+      "creator": "elmasse",
+      "summary": "Bundle implementation for ExtJS",
+      "detailedDescription": "Use bundle files (.properties) or json to get internationalised messages",
+      "type": "code",
+      "signatures": [
+        {
+          "name": "elmasse",
+          "uuid": "0c9e981f-d111-4bb2-bf24-ce2efe07fef1",
+          "created": "2016-04-06T00:54:33Z",
+          "algorithm": "SHA1withRSA",
+          "nonce": "BjXhYdAPBC8\u003d",
+          "signature": "ctG623fXwobfjJHxWFvSxVURMpQSkliz6mOUG5XhlwoRgyaLF6TkbO/maOMJE1aUqluSI4pCjam5B8CGUHHZPfaSoGQcK0KOqybgy4+mwaqw3pk6qLd5ukUcCrzMGvfsUal5QJFm5IHHyoQlx43/3Y0UfW4hTC2rRRHD7UGeQflElXEoKa+eLUURFHdYtcO16O5Uv8ouMbQez060vw0zzqvxdzMFxZG/q9BVu6zYFltxuYe3gmQN+cBeDMtf2crvW/MgKJQsiXkMJ7jKhT53iO1gUiPHEcxXKV7DPJbimooRSfPDAT+DC7I1aFdxEpiCn9LfCbxaxoCu0Sj7VElZtg\u003d\u003d"
+        },
+        {
+          "name": "elmasse",
+          "uuid": "a8fd4848-a33b-4403-96cd-d2b3c0c613ce",
+          "created": "2015-02-17T19:51:33Z",
+          "algorithm": "SHA1withRSA",
+          "nonce": "I/VNjt/ZP64\u003d",
+          "signature": "MVouF9xw80dUrJKlq8F+yneFLu2vbY4i5iLxF1jGxcsIPawZ/BuMdFF5Romp7GkfSn/3mLJtPxK8exUf9otvy1XdvTWke00smbQDkmLQf3y7gjuSHDToF90vV382Z0HxOXnO4p6u5Hc1fAvNvRWxFSH83YfC9Wr5DkWN+9RVErZc6MUKCpMogECN4ZKwgeleuhFbTPyMFa8oOeovbfgMCptqp3qnG4nna+hnZtutERAMn2I5Ux+BSMh4aXWtlM4WQmR4IWtox6Uq7qDHo3aqvs9VWv3xniAgw/GeNQVK5TVMpcofgT35T2FcfkNamATEBlWv0SFOeqV9XR44RridJg\u003d\u003d"
+        }
+      ],
+      "slicer": {
+        "js": [
+          {
+            "path": "${package.dir}/sass/example/custom.js",
+            "isWidgetManifest": true
+          }
+        ]
+      },
+      "builds": {
+        "classic": {
+          "toolkit": "classic"
+        },
+        "modern": {
+          "toolkit": "modern"
+        }
+      }
+    }    
   ]
 }
