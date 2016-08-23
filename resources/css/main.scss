@@ -12,27 +12,19 @@
         "layout",
         "syntax-highlighting",
         "icons"
-
 ;
 
 // categories
 
-// .home {
-//     .site-header {
-//         //@include radial-gradient(#555A5F, #000000);
-//         // @include radial-gradient(#f85, #c30);
-//         // @include radial-gradient(#444, #181818);
-//     }
-// }
 
-// .about {
-//     .site-header {
-//         // @include radial-gradient(#444, #181818);    
-//     }
-// }
+.about {
+    .site-header {
+        @include radial-gradient(#666, #323232);
+    }
+}
 
-// .contact {
-//     .site-header {
-//         //background: url("../img/bg-4.jpg") scroll center center / cover transparent;
-//     }
-// }
+.contact {
+    .site-header {
+        @include radial-gradient(#444, #181818);
+    }
+}
