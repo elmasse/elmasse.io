@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Declarative vs Imperative"
-categories: js
+category: js
 tags: [es7, nodejs, decorators, bind-operator]
 comments: true
 ---

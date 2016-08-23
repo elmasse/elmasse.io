@@ -2,7 +2,7 @@
 layout: post
 title:  "Ext.ux.Cover"
 description: A Cover Component for Sencha Touch
-categories: projects
+category: projects
 tags: sencha-touch
 comments: true
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "elmasse-bundle: A Sencha Cmd Package"
-categories: extjs
+category: extjs
 tags: [extjs, cmd, i18n, package]
 comments: true
 ---
