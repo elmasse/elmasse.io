@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-description: Who I am and what I do
+description: So, Who is this guy?
 category: about
 permalink: /about/
 ---
