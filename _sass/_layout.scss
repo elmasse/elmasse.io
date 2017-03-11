@@ -28,11 +28,21 @@
  */
 .site-header {
     border-top: 2px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-dark;
+    // border-bottom: 1px solid $grey-color-dark;
     min-height: 56px;
     @include radial-gradient(#555A5F, #212121);
     
     position: relative;
+    min-height: 75vh;
+    &::after {
+        content: "";
+        position: absolute;
+        border-width: 25vh 100vw 0 0;
+        border-color: transparent #fff transparent;
+        border-style: solid;
+        top: 50vh;
+        bottom: 0;        
+    }
 }
 
 .site-title {
