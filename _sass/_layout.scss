@@ -40,7 +40,6 @@
         border-width: 25vh 100vw 0 0;
         border-color: transparent #fff transparent;
         border-style: solid;
-        top: 50vh;
         bottom: 0;        
     }
 }
@@ -130,16 +129,7 @@
 .site-footer {
     // border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
-    background-color: #f9f9f9;
-    &::before {
-        content: "";
-        position: relative;
-        border-width: 0 0 25vh 100vw;
-        border-color: #f9f9f9 transparent;
-        border-style: solid;
-        top: -240px;
-    }
-    
+    background-color: #f9f9f9;    
 }
 
 .footer-heading {
