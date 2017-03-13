@@ -217,7 +217,8 @@
     font-size: 12px;
     margin: 10px 1px;
     background: #f1f1f1;
-    padding: 5px;
+    padding: 5px 10px;
+    color: $text-color;
 }
 
 .post-link {
@@ -229,9 +230,16 @@
 
 /**
  * Posts
- */
+ */ 
 .post-header {
-    margin-bottom: $spacing-unit;
+    margin: $spacing-unit 0;
+
+    .post-date {
+        font-size: $base-font-size;
+        color: $white-color;
+        margin-right: 5px;
+    }
+
 }
 
 .post-title {
