@@ -1,0 +1,27 @@
+{
+  "name": "elmasse.github.io",
+  "version": "1.0.0",
+  "description": "elmasse.github.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nextein"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elmasse/elmasse.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elmasse/elmasse.github.io/issues"
+  },
+  "homepage": "https://github.com/elmasse/elmasse.github.io#readme",
+  "dependencies": {
+    "next": "^3.0.6",
+    "nextein": "1.0.0-beta19",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
