@@ -3,6 +3,7 @@ layout: post
 title:  "Using JWT Tokens with Node & ExtJS 5"
 category: nodejs
 tags: [jwt, nodejs, express, api, extjs]
+slug: /nodejs/using-jwt-with-extjs.html
 comments: true
 ---
 

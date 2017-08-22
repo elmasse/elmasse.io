@@ -1,8 +1,10 @@
 ---
 layout: post
-title:  "Declarative vs Imperative"
+title:  Decorators with ES7
+description: Exploring decorators and bindings
 category: js
 tags: [es7, nodejs, decorators, bind-operator]
+slug: /js/decorators-bindings-es7.html
 comments: true
 ---
 

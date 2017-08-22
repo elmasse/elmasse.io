@@ -4,12 +4,13 @@ title:  "Ext.ux.Cover"
 description: A Cover Component for Sencha Touch
 category: projects
 tags: sencha-touch
+slug: /projects/ext-ux-cover.html
 comments: true
 ---
 
 The **Ext.ux.Cover** widget for Sencha Touch 2 allows you to create a Coverflow presentation not only for images but for almost everything. This implementation aims to work in a similar way as Ext.List, so you can present images, text and even audio or video tags.
 
-![cover](/resources/post-assets/Cover.png)
+![cover](/static/post-assets/Cover.png)
 
 ## Download
 
