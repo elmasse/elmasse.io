@@ -35,7 +35,14 @@ const Footer = styled('div')`
 
   & > div {
     min-width: 1000px;
-    margin: 0 auto;  
+    margin: 0 auto;
+
+    @media (max-width: 600px) {
+      min-width: auto;
+      padding: 10px 20px; 
+      margin: 0 0;
+    }
+
   }
 
   & h2 {

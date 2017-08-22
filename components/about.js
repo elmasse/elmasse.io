@@ -34,13 +34,12 @@ const About = styled('div') `
   background: #e3e3e3;
   padding: 50px 20px 0;
 
-  // &:before {
-  //   content: "About";
-  //   position: absolute;
-  //   top: -15vh;
-  //   font-size:60vh;
-  //   z-index: -1;
-  // }
+  @media (max-width: 600px) {
+    height: 80vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+  }
 
   &:after {
     content: "";
@@ -59,8 +58,16 @@ const Section = styled('a')`
   flex-direction: column;
   align-items: center;
   padding: 0 90px;
+
+  @media (max-width: 600px) {
+    padding: 10px 0px;
+    
+  }    
 `
 const Description = styled('div')`
   margin-top: 30px;
   color: #828282;
+  @media (max-width: 600px) {
+    margin-top: 10px;
+  }
 `

@@ -1,9 +1,9 @@
 import React from 'react'
 import Moment from 'react-moment'
 import Head from 'next/head'
+import { injectGlobal, hydrate } from 'emotion'
 import styled from 'emotion/react'
 import DisqusComments from 'react-disqus-comments';
-
 
 import withPost, { Content } from 'nextein/post'
 
@@ -12,7 +12,29 @@ import Tags from '../components/tags'
 import Footer from '../components/footer'
 import withAnalytics from '../components/analytics'
 
+// Adds server generated styles to emotion cache.
+// '__NEXT_DATA__.ids' is set in '_document.js'
+if (typeof window !== 'undefined') {
+  hydrate(window.__NEXT_DATA__.ids)
+}
+
 const Post = withPost(({ post }) => {
+
+  injectGlobal`
+    html, body {
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      color: #0af;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 12px;
+      }
+    }
+  `  
   const { title, description, category, tags, date, comments=false, url } = post.data
   return (
     <div>
@@ -58,6 +80,10 @@ const Body = styled(Content)`
   max-width: 1000px;
   margin: 0 auto;
 
+  @media (max-width: 600px) {
+    padding: 10px 20px;
+  }
+
   > blockquote {
     border-left: 5px solid #eee;
     margin: 0;
@@ -72,8 +98,16 @@ const Disclaimer = styled('p')`
   font-weight: 200;
   color: #888;
   padding: 40px 0;
+  
+  @media (max-width: 600px) {
+    padding: 10px 20px;
+  }  
 `
 const Comments = styled('div')`
   max-width: 1000px;
   margin: 50px auto;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `

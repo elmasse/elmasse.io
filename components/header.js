@@ -26,6 +26,11 @@ const Header = styled('div') `
   background: #f3f3f3;
   padding: 10px 20px;
 
+  @media (max-width:600px){
+    width: auto;
+    height: 90vh;
+  }
+
   &:after {
     content: "";
     position: absolute;
@@ -37,7 +42,12 @@ const Header = styled('div') `
   }
   > div {
     width:1000px;
-    margin: 0px auto;      
+    margin: 0px auto;
+
+    @media (max-width:600px){
+      width: auto;
+    }
+  
   }
 `
 const Title = styled(`h1`) `

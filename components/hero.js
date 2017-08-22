@@ -37,6 +37,11 @@ const Hero = styled('div')`
 const Header = styled('div')`
   width:1000px;
   margin: 0px auto;
+  @media (max-width: 600px) {
+    width: auto;
+    margin: 0px;
+    
+  }
 `
 const Title = styled(`h1`)`
   font-family: Open Sans;

@@ -1,7 +1,7 @@
 import React from 'react'
 import Moment from 'react-moment'
 import Head from 'next/head'
-import { injectGlobal } from 'emotion'
+import { injectGlobal, hydrate } from 'emotion'
 import styled from 'emotion/react'
 import withPosts, { sortByDate } from 'nextein/posts'
 import { Content } from 'nextein/post'
@@ -13,6 +13,12 @@ import About from '../components/about'
 import Footer from '../components/footer'
 import withAnalytics from '../components/analytics'
 
+// Adds server generated styles to emotion cache.
+// '__NEXT_DATA__.ids' is set in '_document.js'
+if (typeof window !== 'undefined') {
+  hydrate(window.__NEXT_DATA__.ids)
+}
+
 const Index = withPosts(({ posts }) => {
   posts.sort(sortByDate)
 
@@ -23,6 +29,12 @@ const Index = withPosts(({ posts }) => {
     a {
       text-decoration: none;
       color: #0af;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 12px;
+      }
     }
   `
 
@@ -60,6 +72,9 @@ export default withAnalytics(Index)
 const Post = styled('div')`
   max-width: 1000px;
   margin: 70px auto;
+  @media (max-width: 600px) {
+    padding: 0 20px;
+  }
 `
 const Title = styled('h1')`
   color: #111;
