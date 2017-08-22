@@ -8,7 +8,7 @@
     "dev": "nextein",
     "export": "nextein build && nextein export",
     "copy-sencha-cmd": "cpr cmd out/cmd -o",
-    "deploy": "npm run copy-sencha-cmd && gh-pages -d out"
+    "deploy": "npm run copy-sencha-cmd && gh-pages -d out -b master -r https://elmasse:$GH_TOKEN@github.com/elmasse/elmasse.github.io.git"
   },
   "repository": {
     "type": "git",
