@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nextein",
-    "export": "nextein build && nextein export"
+    "export": "nextein build && nextein export",
+    "copy-sencha-cmd": "cpr cmd out/cmd -o",
+    "deploy": "npm run copy-sencha-cmd && gh-pages -d out"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,9 @@
   },
   "homepage": "https://github.com/elmasse/elmasse.github.io#readme",
   "dependencies": {
+    "cpr": "^2.2.0",
     "emotion": "^7.1.0",
+    "gh-pages": "^1.0.0",
     "moment": "^2.18.1",
     "next": "^3.0.6",
     "nextein": "1.0.0-beta19",
