@@ -10,7 +10,7 @@
     "copy-sencha-cmd": "cpr cmd out/cmd -o",
     "copy-nojekyll": "cpr .nojekyll out/.nojekyll",
     "copy": "npm run copy-nojekyll && npm run copy-sencha-cmd",
-    "deploy": "npm run copy && gh-pages -d out -b master -r https://elmasse:$GH_TOKEN@github.com/elmasse/elmasse.github.io.git"
+    "deploy": "npm run copy && gh-pages -t -d out -b master -r https://elmasse:$GH_TOKEN@github.com/elmasse/elmasse.github.io.git"
   },
   "repository": {
     "type": "git",
