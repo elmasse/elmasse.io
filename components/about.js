@@ -50,10 +50,30 @@ const About = styled('div') `
     border-color: transparent #fff transparent;
     border-style: solid;
   }
+
+  @media (min-width: 800px) {
+    background: rgba(0,0,0, .11);
+    
+    &:before {
+      content: "About";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      color: #f3f3f3;
+      font-size: 55vh;
+      text-align: center;
+      line-height: .9; 
+    }
+      
+  }
 `
 const Section = styled('a')`
-  font-size: 1em;
+  font-size: 1.25em;
   font-weight: 300;
+  text-shadow: 1px 1px 1px #eee;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,7 +81,6 @@ const Section = styled('a')`
 
   @media (max-width: 600px) {
     padding: 10px 0px;
-    
   }    
 `
 const Description = styled('div')`
