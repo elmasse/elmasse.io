@@ -33,8 +33,8 @@ export default class MyDocument extends Document {
           </script>
           
           <meta name='viewport' content='width=device-width,minimum-scale=1' />
-          <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,600|Open+Sans:300,400,600' />
-          <style>{`body {font-family: Roboto, sans-serif;}`}</style>
+          <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:100,300,400,600|Open+Sans:300,400,600' />
+          <style>{`body {font-family: Lato, sans-serif;}`}</style>
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />          
         </Head>
         <body>
