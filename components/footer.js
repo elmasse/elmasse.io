@@ -11,6 +11,9 @@ export default () => {
         <p>
           Maximiliano Fierro &copy; 2013-{+new Date().getFullYear()}
         </p>
+        <div>
+        Built with ♥︎ and <a href="https://nextein.now.sh">nextein</a> by <a href="https://github.com/elmasse">/<span>elmasse</span></a>
+        </div>
       </div>
     </Footer>
   )
