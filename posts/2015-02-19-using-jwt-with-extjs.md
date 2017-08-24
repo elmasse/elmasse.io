@@ -18,20 +18,20 @@ Let's start defining a few endpoints for our application:
 ## NodeJS
 We can start by creating a new project: 
 
-```
+```bash
 mkdir jwt-test
 cd jwt-test
 npm init
 ```
 Install `express`, `body-parser`, `express-jwt` and `jsonwebtoken`:
 
-```
+```bash
 npm i -S express express-jwt jsonwebtoken body-parser
 ```
 
 Create a `public` folder where we are going to publish our ExtJS application:
 
-```
+```bash
 mkdir public
 ```
 
@@ -381,14 +381,14 @@ Ext.application({
 ## Running the Application
 Let's first refresh our ExtJS app. Go to `jwt-test/public/Bookmarks` folder and run:
 
-```
+```bash
 sencha app refresh
 
 ```
 
 Now we can start our server. Just run the server.js on `jwt-test` folder:
 
-```
+```bash
 node server.js
 
 ```

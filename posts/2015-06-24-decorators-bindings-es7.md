@@ -177,7 +177,7 @@ class MyClass { }
 //....
 ```
 
-```
+```bash
 index.js:36
     throw new Error('Method named: ' + methodName + ' is defined twice.');
           ^
