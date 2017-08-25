@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Moment from 'react-moment'
 import Head from 'next/head'
 import { injectGlobal, hydrate } from 'emotion'
 import styled from 'emotion/react'
+import Highlight from 'react-highlight'
 import DisqusComments from 'react-disqus-comments';
 
 import withPost, { Content } from 'nextein/post'
@@ -18,54 +19,72 @@ if (typeof window !== 'undefined') {
   hydrate(window.__NEXT_DATA__.ids)
 }
 
-const Post = withPost(({ post }) => {
+class Post extends Component {
 
-  injectGlobal`
-    html, body {
-      margin: 0;
-    }
-    a {
-      text-decoration: none;
-      color: #0af;
-    }
+  componentDidMount() {
+    hljs.initHighlighting();    
+  }
 
-    @media (max-width: 600px) {
-      body {
-        font-size: 12px;
+  render() {
+    const { post } = this.props
+    injectGlobal`
+      html, body {
+        margin: 0;
       }
-    }
-  `  
-  const { title, description, category, tags, date, comments=false, url } = post.data
-  return (
-    <div>
-      <Head>
-        <title>{`elmasse | ${title}`}</title>
-      </Head>
-      <Header title={title} description={description}>
-        <Meta>
-          <Moment format="MMMM D, YYYY">{date}</Moment>
-          <Tags tags={tags} />
-        </Meta>
-      </Header >
-
-      <Body {...post} sanitize={false}/>
-      <Disclaimer>
-        &#8250; Any viewpoints and opinions expressed in this article are my own and do not, in any way, reflect those of my employer, my colleagues, or anyone else. I speak only for myself, not for them.
-      </Disclaimer>
-      {comments && 
-      <Comments>
-        <DisqusComments 
-          shortname="elmassegithubio"
-          title={title}
-        />
-      </Comments>
+      a {
+        text-decoration: none;
+        color: #0af;
       }
-      <Footer />
-    </div>
-  )
-})
 
-export default withAnalytics(Post)
+      @media (max-width: 600px) {
+        body {
+          font-size: 12px;
+        }
+      }
+    `  
+    const { title, description, category, tags, date, comments=false, url } = post.data
+    return (
+      <div>
+        <Head>
+          <title>{`elmasse | ${title}`}</title>
+        </Head>
+        <Header title={title} description={description}>
+          <Meta>
+            <Moment format="MMMM D, YYYY">{date}</Moment>
+            <Tags tags={tags} />
+          </Meta>
+        </Header >
+
+        <Body {...post} sanitize={false} renderers={{ code: Code }}/>
+        <Disclaimer>
+          &#8250; Any viewpoints and opinions expressed in this article are my own and do not, in any way, reflect those of my employer, my colleagues, or anyone else. I speak only for myself, not for them.
+        </Disclaimer>
+        {comments && 
+        <Comments>
+          <DisqusComments 
+            shortname="elmassegithubio"
+            title={title}
+          />
+        </Comments>
+        }
+        <Footer />
+      </div>
+    )
+  }
+}
+
+export default withAnalytics(withPost(Post))
+
+const Code = ({className = "", children}) => {
+  const [, lang] = className.split('-')
+  if (lang) {
+    return <Highlight className={className}>{children.join('')}</Highlight>
+  }
+
+  return <code className={className}>{children}</code>
+
+}
+
 
 const Meta = styled('div')`
   display: flex;
