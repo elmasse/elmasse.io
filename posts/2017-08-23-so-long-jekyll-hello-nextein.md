@@ -7,9 +7,9 @@ slug: /js/so-long-jekyll-hello-nextein.html
 comments: true
 ---
 
-Over the last couple weeks I have been working on `nextein`. It is a blog / static site generator based on the great work of **Zeit's Next.js**. I decided then to migrate my own blog. I'm a Javascript developer. Writting a blog in `Markdown` is super simple. Having to deal with `ruby` & `liquid` was an experience I didn't like much. Don't get me wrong. `Jekyll` is awesome and very versatile. But it is `ruby`. And `liquid`. And I'm not a `ruby` developer.
+Over the last couple weeks I have been working on [nextein](https://nextein.now.sh). It is a blog / static site generator based on the great work of [Next.js](http://github.com/zeit/next.js). I decided then to migrate my own blog. I'm a Javascript developer. Writting a blog in **Markdown** is super simple. Having to deal with _ruby_ & _liquid_ was an experience I didn't like much. Don't get me wrong. _Jekyll_ is awesome and very versatile. But it is _ruby_. And _liquid_. And I'm not a _ruby_ developer.
 
-So here I am. I'm gonna try to give you a hint of what I did for getting this blog running with `nextein`. 
+So here I am. I'm gonna try to give you a hint of what I did for getting this blog running with **nextein**. 
 
 
 ## Jekyll
