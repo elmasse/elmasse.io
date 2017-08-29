@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'emotion/react'
 
 import Github from './icons/github'
+import LinkedIn from './icons/linkedin'
 import Mail from './icons/mail'
 import Twitter from './icons/twitter'
 
@@ -17,6 +18,10 @@ export default () => {
         <Twitter fill="#212121" width="55" style={{padding: '10px'}}/>
         <Description>twitter.com/<strong>elmasse</strong></Description>
       </Section>
+      <Section href="https://linkedin.com/in/maximilianofierro">
+        <LinkedIn fill="#212121" width="55" style={{padding: '5px'}}/>
+        <Description>in/<strong>maximilianofierro</strong></Description>
+      </Section>      
       <Section href="mailto:elmasse@gmail.com">
         <Mail fill="#212121" width="55" style={{padding: '5px'}}/>
         <Description><strong>elmasse</strong> at gmail dot com</Description>
@@ -77,7 +82,7 @@ const Section = styled('a')`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 90px;
+  padding: 0 20px;
 
   @media (max-width: 600px) {
     padding: 10px 0px;
