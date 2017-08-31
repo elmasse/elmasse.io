@@ -77,7 +77,7 @@ const config = require('nextein/config').default;
 module.exports = config({
 	exportPathMap: function() {
 		return {
-			'/about': { page: 'about' }
+			'/about': { page: '/about' }
 		};
 	}
 });
