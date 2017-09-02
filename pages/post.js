@@ -103,6 +103,16 @@ const Body = styled(Content)`
     padding: 10px 20px;
   }
 
+  & p {
+    line-height: 1.4;
+  }
+
+  & p code {
+    background: #e4e4e4;
+    padding: 4px;
+  }
+
+
   > blockquote {
     border-left: 5px solid #eee;
     margin: 0;

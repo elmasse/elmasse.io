@@ -97,6 +97,15 @@ const Body = styled(Content)`
   font-family: 'Open Sans';
   font-weight:300;
   font-size: 1.3em;
+  
+  & p {
+    line-height: 1.4;
+  }
+
+  & p code {
+    background: #e4e4e4;
+    padding: 4px;
+  }
 `
 const ReadMore = styled('a')`
   font-weight: 300;
