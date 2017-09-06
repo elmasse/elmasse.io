@@ -40,7 +40,7 @@ const About = styled('div') `
   padding: 50px 20px 0;
 
   @media (max-width: 600px) {
-    height: 80vh;
+    height: 90vh;
     flex-direction: column;
     justify-content: flex-start;
     padding: 0;
