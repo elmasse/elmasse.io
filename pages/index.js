@@ -56,7 +56,7 @@ const Index = withPosts(({ posts }) => {
                 <Moment format="MMMM D, YYYY">{date}</Moment>
                 <Tags tags={tags} />
                </Meta> 
-              <Body {...post} excerpt sanitize={false} />
+              <Body {...post} excerpt />
               <Link {...post} passHref><ReadMore>Continue reading </ReadMore></Link> 
             </Post>
           )

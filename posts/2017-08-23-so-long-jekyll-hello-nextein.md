@@ -3,7 +3,7 @@ title: So long jekyll, hello nextein
 description: Migrating my blog into 100% Javascript
 category: js
 tags: [blog, react, nextein, nextjs]
-slug: /js/so-long-jekyll-hello-nextein.html
+permalink: /:category?/:name.html
 comments: true
 ---
 

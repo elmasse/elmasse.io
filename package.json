@@ -29,7 +29,7 @@
     "gh-pages": "^1.0.0",
     "moment": "^2.18.1",
     "next": "^3.2.1",
-    "nextein": "1.0.0-beta19",
+    "nextein": "1.0.0-beta20",
     "react": "^15.6.1",
     "react-disqus-comments": "^1.0.3",
     "react-dom": "^15.6.1",

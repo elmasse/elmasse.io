@@ -3,7 +3,7 @@ layout: post
 title:  "Ext.i18n.Bundle"
 description: Internationalization for ExtJS and Sencha Touch
 category: projects
-slug: /projects/ext-i18n-bundle.html
+permalink: /:category?/:name.html
 tags: [sencha-touch, extjs]
 comments: true
 ---

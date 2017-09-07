@@ -4,7 +4,7 @@ title:  "Ext.ux.Cover"
 description: A Cover Component for Sencha Touch
 category: projects
 tags: sencha-touch
-slug: /projects/ext-ux-cover.html
+permalink: /:category?/:name.html
 comments: true
 ---
 

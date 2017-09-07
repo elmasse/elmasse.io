@@ -55,7 +55,7 @@ class Post extends Component {
           </Meta>
         </Header >
 
-        <Body {...post} sanitize={false} renderers={{ code: Code }}/>
+        <Body {...post} renderers={{ code: Code }}/>
         <Disclaimer>
           &#8250; Any viewpoints and opinions expressed in this article are my own and do not, in any way, reflect those of my employer, my colleagues, or anyone else. I speak only for myself, not for them.
         </Disclaimer>
