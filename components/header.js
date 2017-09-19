@@ -28,7 +28,7 @@ const Header = styled('div') `
 
   @media (max-width:600px){
     width: auto;
-    height: 90vh;
+    height: 95vh;
   }
 
   &:after {
