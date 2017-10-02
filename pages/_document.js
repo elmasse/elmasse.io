@@ -32,16 +32,11 @@ export default class MyDocument extends Document {
           <style>{`body {font-family: Lato, sans-serif;}`}</style>
 
           <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css" />		
-           <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>		
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />          
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script dangerouslySetInnerHTML={{__html:`		
-             hljs.configure({languages: ["bash", "javascript", "json", "markdown"]});		
-           `}}>
-           </script>          
         </body>
       </html>
     )

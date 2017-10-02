@@ -8,6 +8,7 @@ import DisqusComments from 'react-disqus-comments';
 
 import withPost, { Content } from 'nextein/post'
 
+import Code from '../components/code'
 import Header from '../components/header'
 import Tags from '../components/tags'
 import Footer from '../components/footer'
@@ -20,10 +21,6 @@ if (typeof window !== 'undefined') {
 }
 
 class Post extends Component {
-
-  componentDidMount() {
-    hljs.initHighlighting();    
-  }
 
   render() {
     const { post } = this.props
@@ -74,17 +71,6 @@ class Post extends Component {
 }
 
 export default withAnalytics(withPost(Post))
-
-const Code = ({className = "", children}) => {
-  const [, lang] = className.split('-')
-  if (lang) {
-    return <Highlight className={className}>{children.join('')}</Highlight>
-  }
-
-  return <code className={className}>{children}</code>
-
-}
-
 
 const Meta = styled('div')`
   display: flex;
