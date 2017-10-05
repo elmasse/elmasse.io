@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import Moment from 'react-moment'
 import Head from 'next/head'
-import { injectGlobal, hydrate } from 'emotion'
-import styled from 'react-emotion'
+import styled, { injectGlobal, hydrate } from 'react-emotion'
 import Highlight from 'react-highlight'
 import DisqusComments from 'react-disqus-comments';
 
@@ -72,7 +71,7 @@ class Post extends Component {
 
 export default withAnalytics(withPost(Post))
 
-const Meta = styled('div')`
+const Meta = styled.div`
   display: flex;
   > time {
     padding-right: 5px;

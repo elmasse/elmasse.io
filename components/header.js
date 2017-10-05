@@ -1,6 +1,6 @@
 
 import React from 'react'
-import styled from 'emotion/react'
+import styled from 'react-emotion'
 
 import Back from './icons/back'
 
@@ -31,7 +31,7 @@ const Header = styled('div') `
     height: 95vh;
   }
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     bottom: 0;

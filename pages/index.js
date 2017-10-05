@@ -69,6 +69,8 @@ const Index = withPosts(({ posts }) => {
 
 export default withAnalytics(Index)
 
+// export default () => <H1>Hola</H1>
+
 const Post = styled('div')`
   max-width: 1000px;
   margin: 70px auto;
@@ -98,11 +100,11 @@ const Body = styled(Content)`
   font-weight:300;
   font-size: 1.3em;
   
-  & p {
+  p {
     line-height: 1.4;
   }
 
-  & p code {
+  p code {
     background: #e4e4e4;
     padding: 4px;
   }

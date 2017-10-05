@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'emotion/react'
+import styled from 'react-emotion'
 
 import Github from './icons/github'
 import LinkedIn from './icons/linkedin'
@@ -46,7 +46,7 @@ const About = styled('div') `
     padding: 0;
   }
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -59,7 +59,7 @@ const About = styled('div') `
   @media (min-width: 800px) {
     background: rgba(0,0,0, .11);
     
-    &:before {
+    &::before {
       content: "About";
       position: absolute;
       top: 0;

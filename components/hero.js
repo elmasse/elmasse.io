@@ -1,6 +1,6 @@
 
 import React from 'react'
-import styled from 'emotion/react'
+import styled from 'react-emotion'
 
 export default () => {
 
@@ -24,7 +24,7 @@ const Hero = styled('div')`
   background: #f3f3f3;
   padding: 10px 20px;
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     bottom: 0;

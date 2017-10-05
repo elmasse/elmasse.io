@@ -1,6 +1,6 @@
 
 import React from 'react'
-import styled from 'emotion/react'
+import styled from 'react-emotion'
 
 export default () => {
 
@@ -26,7 +26,7 @@ const Footer = styled('div')`
   height: 20vh;
   margin-top: 25vh;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: -25vh;

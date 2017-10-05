@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <meta charset='utf-8' />
+          <meta charSet='utf-8' />
           <link rel='canonical' href='/' />
           <meta name='viewport' content='width=device-width,minimum-scale=1' />
           <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:100,300,400,600|Open+Sans:300,400,600' />

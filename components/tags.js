@@ -1,12 +1,11 @@
 import React from 'react'
-import styled from 'emotion/react'
+import styled from 'react-emotion'
 
 export default ({ tags }) => {
   tags = [].concat(tags) // might be ['tag'] or 'tag'
   return (
-    tags.length &&
     <div>
-      {
+      {tags.length &&
         tags.map(tag => <Tag key={`tag-${tag}`}>{tag}</Tag>)
       }
     </div>
