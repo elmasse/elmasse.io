@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Moment from 'react-moment'
 import Head from 'next/head'
 import styled, { injectGlobal, hydrate } from 'react-emotion'
-import Highlight from 'react-highlight'
 import DisqusComments from 'react-disqus-comments';
 
 import withPost, { Content } from 'nextein/post'
