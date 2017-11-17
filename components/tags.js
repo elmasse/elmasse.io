@@ -17,5 +17,6 @@ const Tag = styled('span')`
   padding: 5px 10px;
   margin: 2px;
   font-size: .8em;
-  font-weight: 100;
+  font-weight: 300;
+  color: #444;
 `

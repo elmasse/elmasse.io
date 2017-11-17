@@ -90,8 +90,8 @@ const Meta = styled('div')`
   display: flex;
 
   > time {
-    font-weight: 200;
-    color: #888;
+    font-weight: 300;
+    color: #444;
     margin-right: 5px;
   }
 `
