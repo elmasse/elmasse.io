@@ -30,14 +30,14 @@
     "emotion-server": "^8.0.12",
     "gh-pages": "^1.1.0",
     "highlight.js": "^9.12.0",
-    "moment": "^2.19.4",
-    "next": "^4.2.1",
+    "moment": "^2.20.1",
+    "next": "^4.2.3",
     "nextein": "^1.0.0",
     "react": "^16.2.0",
     "react-disqus-comments": "^1.1.1",
     "react-dom": "^16.2.0",
     "react-emotion": "^8.0.12",
-    "react-ga": "^2.3.5",
-    "react-moment": "^0.6.8"
+    "react-ga": "^2.4.1",
+    "react-moment": "^0.6.9"
   }
 }
