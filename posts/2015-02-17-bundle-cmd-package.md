@@ -19,7 +19,7 @@ You need to have Sencha Cmd installed:
 ### Register a new repository
 First, we need to register the repository so Sencha Cmd can look up for new packages:
 
-```
+```bash
 $ sencha repo add elmasse http://elmasse.github.io/cmd/pkgs
 
 ```
@@ -29,7 +29,7 @@ $ sencha repo add elmasse http://elmasse.github.io/cmd/pkgs
 ### Create a new ExtJS 5 Application
 Let's create a new application so we can see how to use it:
 
-```
+```bash
 $ sencha generate app -ext MyApp ./MyApp
 
 ```
@@ -39,7 +39,7 @@ Now we need to edit the `app.json` file (located under `MyApp` folder) and add t
 
 > app.json
 
-```
+```json
 {    
     ...
 
