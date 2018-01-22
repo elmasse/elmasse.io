@@ -11,6 +11,7 @@ Over the last couple weeks I have been working on [nextein](https://nextein.now.
 
 So here I am. I'm gonna try to give you a hint of what I did for getting this blog running with **nextein**. 
 
+---
 
 ## Jekyll
 
