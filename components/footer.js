@@ -54,7 +54,8 @@ const Footer = styled('div')`
   }
 
   & p {
-    font-weight: 200;
+    margin: 0 0 30px 0;
+    font-weight: 300;
   }
 
 `

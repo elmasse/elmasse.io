@@ -98,13 +98,10 @@ const Meta = styled('div')`
 const Body = styled(Content)`
   font-family: 'Open Sans';
   font-weight:300;
-  font-size: 1.3em;
-  
-  p {
-    line-height: 1.4;
-  }
+  font-size: 1.25em;
+  line-height: 1.5;
 
-  p code {
+  code {
     background: #e4e4e4;
     padding: 4px;
   }

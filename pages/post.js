@@ -50,7 +50,15 @@ class Post extends Component {
           </Meta>
         </Header >
 
-        <Body {...post} renderers={{ code: Code }}/>
+        <Body {...post}
+          renderers={{
+            h2: Heading2,
+            hr: Divider,
+            p: Paragraph,
+            blockquote: Blockquote,
+            code: Code
+          }}
+        />
         <Disclaimer>
           &#8250; Any viewpoints and opinions expressed in this article are my own and do not, in any way, reflect those of my employer, my colleagues, or anyone else. I speak only for myself, not for them.
         </Disclaimer>
@@ -87,22 +95,48 @@ const Body = styled(Content)`
     padding: 10px 20px;
   }
 
-  & p {
-    line-height: 1.4;
-  }
+`
 
-  & p code {
+const Heading2 = styled('h2')`
+  font-size: 1.5em;
+  margin-left: -2px;
+  margin-top: 75px;
+  margin-bottom: 0;  
+`
+
+const Paragraph =styled('p')`
+  line-height: 1.5;
+
+  code {
     background: #e4e4e4;
     padding: 4px;
   }
+`
 
+const Blockquote = styled('blockquote')`
+  border-left: 5px solid #eee;
+  margin: 1.5em 0 0 0;
+  padding: 0 1em;
 
-  > blockquote {
-    border-left: 5px solid #eee;
+  > p {
     margin: 0;
-    padding: 0 1em;
+    font-size: .85em;
   }
 `
+
+const Divider = styled('hr')`
+  margin: 60px 0 40px 0;
+  border: none;    
+  &:before {
+    content: "...";
+    text-align: center;
+    display: block;
+    letter-spacing: .6em;
+    font-weight: bold;
+  }
+
+`
+
 const Disclaimer = styled('p')`
   max-width: 1000px;
   margin: 0 auto;
