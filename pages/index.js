@@ -69,7 +69,7 @@ const Index = withPosts(({ posts }) => {
 
 export default withAnalytics(Index)
 
-// export default () => <H1>Hola</H1>
+
 
 const Post = styled('div')`
   max-width: 1000px;
