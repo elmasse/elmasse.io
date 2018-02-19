@@ -1,15 +1,24 @@
 
 import React from 'react'
 import styled from 'react-emotion'
+import { Twitter, Facebook, Linkedin } from 'react-social-sharing'
 
 import Back from './icons/back'
 
 export default ({ title, description, children }) => {
-
+  const message = `${title} ${description} via @elmasse`
   return (
     <Header>
       <div>
         <div><a href="/"><Back fill="#212121" width="25" style={{padding: '10px 0', marginTop: '10px'}}/></a></div>
+        {
+          typeof window !== 'undefined' &&
+          <Social>
+            <Twitter solid small message={message} link={window.location} />
+            <Facebook solid small message={message} link={window.location} />
+            <Linkedin solid small message={message} link={window.location} />
+          </Social>      
+        }
         <Title>{title}</Title>
         <Description>{description}</Description>
         {children}
@@ -50,10 +59,15 @@ const Header = styled('div') `
   
   }
 `
+
+const Social = styled('div')`
+  margin-left: -0.5em;
+`
+
 const Title = styled(`h1`) `
   font-size: 4.5em;
   font-weight: 600;
-  margin-bottom: 0px;
+  margin: 0px;
 `
 const Description = styled(`h1`) `
   font-size: 2.5em;
