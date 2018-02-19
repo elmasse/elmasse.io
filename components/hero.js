@@ -6,8 +6,7 @@ export default () => {
 
   return (
     <Hero>
-      <Header>
-        
+      <Header>        
         <Title>elmasse</Title>
         <SubTitle>Maximiliano Fierro</SubTitle>
         <Description>Javascript Developer</Description>
