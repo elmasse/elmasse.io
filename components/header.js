@@ -5,7 +5,7 @@ import { Twitter, Facebook, Linkedin } from 'react-social-sharing'
 
 import Back from './icons/back'
 
-export default ({ title, description, children }) => {
+export default ({ title, description = '', children }) => {
   const message = `${title} ${description} via @elmasse`
   return (
     <Header>
