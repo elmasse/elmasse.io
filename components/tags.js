@@ -13,10 +13,9 @@ export default ({ tags }) => {
 }
 
 const Tag = styled('span')`
-  background: #e5e5e5;
+  background: #0af;
   padding: 5px 10px;
   margin: 2px;
-  font-size: .8em;
-  font-weight: 300;
-  color: #444;
+  font-size: .8em;  
+  color: #fff;
 `

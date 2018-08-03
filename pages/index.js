@@ -102,10 +102,16 @@ const Body = styled(Content)`
   line-height: 1.5;
 
   code {
-    background: #e4e4e4;
+    background: #f9f9f9;
     padding: 4px;
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
   }
 `
 const ReadMore = styled('a')`
-  font-weight: 300;
+  :before {
+    content: '>';
+    padding: 0 5px;
+  }
 `

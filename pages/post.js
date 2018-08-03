@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import Moment from 'react-moment'
 import Head from 'next/head'
 import styled, { injectGlobal, hydrate } from 'react-emotion'
-import DisqusComments from 'react-disqus-comments';
-
+import Disqus from 'disqus-react';
+ 
 import withPost, { Content } from 'nextein/post'
 
 import Code from '../components/code'
@@ -48,7 +48,7 @@ class Post extends Component {
             <Moment format="MMMM D, YYYY">{date}</Moment>
             <Tags tags={tags} />
           </Meta>
-        </Header >
+        </Header>
 
         <Body {...post}
           renderers={{
@@ -62,13 +62,11 @@ class Post extends Component {
         <Disclaimer>
           &#8250; Any viewpoints and opinions expressed in this article are my own and do not, in any way, reflect those of my employer, my colleagues, or anyone else. I speak only for myself, not for them.
         </Disclaimer>
-        {comments && 
-        <Comments>
-          <DisqusComments 
-            shortname="elmassegithubio"
-            title={title}
-          />
-        </Comments>
+        { 
+          comments && 
+          <Comments>
+            <Disqus.DiscussionEmbed shortname="elmassegithubio" config={{title}} />
+          </Comments>
         }
         <Footer />
       </div>
@@ -108,8 +106,12 @@ const Paragraph =styled('p')`
   line-height: 1.5;
 
   code {
-    background: #e4e4e4;
+    background: #f9f9f9;
     padding: 4px;
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
+
   }
 `
 

@@ -45,12 +45,10 @@ const Footer = styled('div')`
       padding: 10px 20px; 
       margin: 0 0;
     }
-
   }
 
   & h2 {
     margin: 0;
-    font-family: Open Sans;
   }
 
   & p {

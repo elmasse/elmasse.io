@@ -21,6 +21,7 @@ const Hero = styled('div')`
   flex-direction: column;
   height: 70vh;
   background: #f3f3f3;
+  background-image: linear-gradient(135deg,#f3f3f3 0%,#f3f3f3 50.99%,#f0f0f0 51%,#f0f0f0 100%);
   padding: 10px 20px;
 
   &::after {
@@ -43,7 +44,6 @@ const Header = styled('div')`
   }
 `
 const Title = styled(`h1`)`
-  font-family: Open Sans;
   font-size: 4.5em;
   font-weight: 600;
   margin-bottom: 0px;
@@ -56,6 +56,7 @@ const SubTitle = styled(`h2`)`
 `
 const Description = styled(`h1`)`
   font-size: 2.5em;
-  font-weight: 100;
+  font-weight: 300;
   margin-top: 0;
+  color: #888;
 `

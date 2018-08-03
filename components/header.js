@@ -10,15 +10,20 @@ export default ({ title, description = '', children }) => {
   return (
     <Header>
       <div>
-        <div><a href="/"><Back fill="#212121" width="25" style={{padding: '10px 0', marginTop: '10px'}}/></a></div>
+        <div>
+          <a href="/"><Back fill="#212121" width="25" style={{padding: '10px 0', marginTop: '10px'}}/></a>
+        </div>
+        <Social>
         {
           typeof window !== 'undefined' &&
-          <Social>
+          <React.Fragment>
             <Twitter solid small message={message} link={window.location} />
             <Facebook solid small message={message} link={window.location} />
             <Linkedin solid small message={message} link={window.location} />
-          </Social>      
+          </React.Fragment>
         }
+        </Social>
+
         <Title>{title}</Title>
         <Description>{description}</Description>
         {children}
@@ -33,6 +38,7 @@ const Header = styled('div') `
   flex-direction: column;
   height: 70vh;
   background: #f3f3f3;
+  background-image: linear-gradient(135deg,#f3f3f3 0%,#f3f3f3 50.99%,#f0f0f0 51%,#f0f0f0 100%);
   padding: 10px 20px;
 
   @media (max-width:600px){
@@ -61,7 +67,11 @@ const Header = styled('div') `
 `
 
 const Social = styled('div')`
+  min-height: 50px;
   margin-left: -0.5em;
+  & > a > div {
+    border-radius: 0px;
+  }
 `
 
 const Title = styled(`h1`) `
@@ -71,6 +81,7 @@ const Title = styled(`h1`) `
 `
 const Description = styled(`h1`) `
   font-size: 2.5em;
-  font-weight: 100;
+  font-weight: 300;
   margin-top: 0;
+  color: #888;
 `
