@@ -18,5 +18,16 @@ module.exports = config({
     )
 
     return config
+  },
+  // workaround for https://github.com/zeit/next.js/issues/5429
+  webpackDevMiddleware: (config) => {
+    config.watchOptions = {
+      ignored: [
+        /\.git\//,
+        /\.next\//,
+        /node_modules/
+      ]
+    }
+    return config
   }
 })
