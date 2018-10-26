@@ -84,9 +84,9 @@ const Meta = styled.div`
 `
 const Body = styled(Content)`
   font-family: 'Open Sans';
-  font-weight:300;
+  font-weight: 400;
   font-size: 1.3em;
-  max-width: 1000px;
+  max-width: 850px;
   margin: 0 auto;
 
   @media (max-width: 600px) {
@@ -96,14 +96,16 @@ const Body = styled(Content)`
 `
 
 const Heading2 = styled('h2')`
-  font-size: 1.5em;
-  margin-left: -2px;
+  font-size: 1.6em;
+  margin-left: -5px;
   margin-top: 75px;
   margin-bottom: 0;  
 `
 
 const Paragraph =styled('p')`
-  line-height: 1.5;
+  line-height: 1.58;
+  color: rgba(0,0,0,.75);
+  letter-spacing: -0.003em; 
 
   code {
     background: #f9f9f9;

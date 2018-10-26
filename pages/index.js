@@ -72,7 +72,7 @@ export default withAnalytics(Index)
 
 
 const Post = styled('div')`
-  max-width: 1000px;
+  max-width: 850px;
   margin: 70px auto;
   @media (max-width: 600px) {
     padding: 0 20px;
@@ -97,10 +97,11 @@ const Meta = styled('div')`
 `
 const Body = styled(Content)`
   font-family: 'Open Sans';
-  font-weight:300;
+  font-weight: 400;
   font-size: 1.25em;
-  line-height: 1.5;
-
+  line-height: 1.58;
+  color: rgba(0,0,0,.75);
+  letter-spacing: -0.003em; 
   code {
     background: #f9f9f9;
     padding: 4px;
