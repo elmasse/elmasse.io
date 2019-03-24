@@ -1,8 +1,8 @@
-const { default: config } = require('nextein/config')
+const { withNextein} = require('nextein/config')
 const { ContextReplacementPlugin } = require('webpack')
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
-module.exports = config({
+module.exports = withNextein({
   webpack: (config) => {
     config.plugins.push(
       // new BundleAnalyzerPlugin({
@@ -17,17 +17,6 @@ module.exports = config({
       )      
     )
 
-    return config
-  },
-  // workaround for https://github.com/zeit/next.js/issues/5429
-  webpackDevMiddleware: (config) => {
-    config.watchOptions = {
-      ignored: [
-        /\.git\//,
-        /\.next\//,
-        /node_modules/
-      ]
-    }
     return config
   }
 })
