@@ -9,11 +9,9 @@
     "export": "nextein build && nextein export",
     "now-dev": "npm run dev",
     "now-build": "npm run export",
-    "copy-sencha-cmd": "cpr cmd out/cmd -o",
     "copy-nojekyll": "cpr .nojekyll out/.nojekyll",
-    "copy": "npm run copy-nojekyll && npm run copy-sencha-cmd",
+    "copy": "npm run copy-nojekyll",
     "deploy": "npm run copy && gh-pages -t -d out -b master -r https://elmasse:$GH_TOKEN@github.com/elmasse/elmasse.github.io.git"
-
   },
   "repository": {
     "type": "git",
