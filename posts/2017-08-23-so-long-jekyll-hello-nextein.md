@@ -1,6 +1,6 @@
 ---
-title: So long jekyll, hello nextein
-description: Migrating my blog into 100% Javascript
+title: So Long jekyll, Hello nextein!
+description: Migrating My Blog into 100% Javascript
 category: js
 tags: [blog, react, nextein, nextjs]
 permalink: /:category?/:name.html

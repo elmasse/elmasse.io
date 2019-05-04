@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Decorators with ES7
-description: Exploring decorators and bindings
+description: Exploring Decorators and Bindings
 category: js
 tags: [es7, nodejs, decorators, bind-operator]
 permalink: /:category?/:name.html

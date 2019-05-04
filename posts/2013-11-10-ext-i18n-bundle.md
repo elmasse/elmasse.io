@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ext.i18n.Bundle"
+title:  Ext.i18n.Bundle
 description: Internationalization for ExtJS and Sencha Touch
 category: projects
 permalink: /:category?/:name.html

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using JWT Tokens with Node & ExtJS 5"
+title:  Using JWT Tokens with Node & ExtJS 5
 category: nodejs
 tags: [jwt, nodejs, express, api, extjs]
 permalink: /:category?/:name.html
