@@ -9,7 +9,7 @@ export default () => {
       <div>
         <h2>elmasse</h2>
         <p>
-          Maximiliano Fierro &copy; 2013-{+new Date().getFullYear()}
+          Max Fierro &copy; 2013-{+new Date().getFullYear()}
         </p>
         <div>
         Built with ♥︎ and <a href="https://nextein.now.sh">nextein</a> by <a href="https://github.com/elmasse">/<span>elmasse</span></a>
@@ -24,7 +24,7 @@ const Footer = styled('div')`
   position: relative;
   background: #e5e5e5;
   height: 20vh;
-  margin-top: 25vh;
+  // margin-top: 25vh;
 
   &::before {
     content: "";

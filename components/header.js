@@ -5,14 +5,13 @@ import { Twitter, Facebook, Linkedin } from 'react-social-sharing'
 
 import Back from './icons/back'
 
-export default ({ title, description = '', children }) => {
+
+export default ({ title, description = '' }) => {
   const message = `${title} ${description} via @elmasse`
   return (
     <Header>
       <div>
-        <div>
-          <a href="/"><Back fill="#212121" width="25" style={{padding: '10px 0', marginTop: '10px'}}/></a>
-        </div>
+        <a href="/"><Back fill="#212121" width="25" style={{padding: '10px 0', marginTop: '10px'}}/></a>
         <Social>
         {
           typeof window !== 'undefined' &&
@@ -23,10 +22,10 @@ export default ({ title, description = '', children }) => {
           </React.Fragment>
         }
         </Social>
-
-        <Title>{title}</Title>
-        <Description>{description}</Description>
-        {children}
+        <TitleGroup>
+          <Title>{title}</Title>
+          <Description>{description}</Description>
+        </TitleGroup>
       </div>
     </Header>
   )
@@ -66,6 +65,14 @@ const Header = styled('div') `
   }
 `
 
+const Meta = styled.div`
+  display: flex;
+  align-items: center;
+  > time {
+    padding-right: 5px;
+  }
+`
+
 const Social = styled('div')`
   min-height: 50px;
   margin-left: -0.5em;
@@ -73,15 +80,21 @@ const Social = styled('div')`
     border-radius: 0px;
   }
 `
+const TitleGroup = styled(`hgroup`) `
+  margin: 24px 0;
+`
 
 const Title = styled(`h1`) `
   font-size: 4.5em;
-  font-weight: 600;
-  margin: 0px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+  margin-left: -0.05em;
+  margin-top: 32px;
 `
-const Description = styled(`h1`) `
-  font-size: 2.5em;
-  font-weight: 300;
+const Description = styled(`h2`) `
+  font-size: 2.2em;
+  font-weight: 100;
   margin-top: 0;
   color: #888;
 `

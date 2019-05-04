@@ -42,7 +42,6 @@ const About = styled('div') `
   @media (max-width: 600px) {
     height: 100vh;
     flex-direction: column;
-    justify-content: flex-start;
     padding: 0;
   }
 
@@ -68,17 +67,18 @@ const About = styled('div') `
       right: 0;
       z-index: -1;
       color: #f3f3f3;
-      font-size: 55vh;
+      font-size: 35vh;
+      letter-spacing: -0.02em;
+      font-weight: 800;
       text-align: center;
-      line-height: .9; 
+      line-height: 1.2; 
     }
       
   }
 `
 const Section = styled('a')`
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: 300;
-  text-shadow: 1px 1px 1px #eee;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,7 +90,7 @@ const Section = styled('a')`
 `
 const Description = styled('div')`
   margin-top: 30px;
-  color: #828282;
+  color: #222;
   @media (max-width: 600px) {
     margin-top: 10px;
   }

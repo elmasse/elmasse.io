@@ -44,7 +44,6 @@ const Index = withPosts(({ posts }) => {
         <title>elmasse | Home</title>
       </Head>
       <Hero />
-      <About />
       {
         posts.map((post, idx) => {
           const { title, url, date, tags } = post.data
@@ -62,6 +61,7 @@ const Index = withPosts(({ posts }) => {
           )
         })
       }
+      <About />
       <Footer />
     </div>
   )
@@ -81,6 +81,8 @@ const Post = styled('div')`
 const Title = styled('h1')`
   color: #111;
   font-size: 2.5em;
+  letter-spacing: -0.02em;
+  margin-left: -0.05em;
   > a {
     text-decoration: none;
     color: inherit;
@@ -96,7 +98,7 @@ const Meta = styled('div')`
   }
 `
 const Body = styled(Content)`
-  font-family: 'Open Sans';
+  font-family: 'Public Sans';
   font-weight: 400;
   font-size: 1.25em;
   line-height: 1.58;
@@ -105,7 +107,7 @@ const Body = styled(Content)`
   code {
     background: #f9f9f9;
     padding: 4px;
-    font-family: 'Open Sans';
+    font-family: 'Public Sans';
     font-style: italic;
     font-weight: 400;
   }

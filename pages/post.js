@@ -44,21 +44,24 @@ class Post extends Component {
           <title>{`elmasse | ${title}`}</title>
         </Head>
         <Header title={title} description={description}>
+        </Header>
+
+        <Body>
           <Meta>
             <Moment format="MMMM D, YYYY">{date}</Moment>
             <Tags tags={tags} />
           </Meta>
-        </Header>
 
-        <Body {...post}
-          renderers={{
-            h2: Heading2,
-            hr: Divider,
-            p: Paragraph,
-            blockquote: Blockquote,
-            code: Code
-          }}
-        />
+          <Content {...post}
+            renderers={{
+              h2: Heading2,
+              hr: Divider,
+              p: Paragraph,
+              blockquote: Blockquote,
+              code: Code
+            }}
+          />
+        </Body>
         <Disclaimer>
           &#8250; Any viewpoints and opinions expressed in this article are my own and do not, in any way, reflect those of my employer, my colleagues, or anyone else. I speak only for myself, not for them.
         </Disclaimer>
@@ -78,12 +81,16 @@ export default withAnalytics(withPost(Post))
 
 const Meta = styled.div`
   display: flex;
+  align-items: center;
+  margin-top: 2em;
+  margin-bottom: 4em;
   > time {
     padding-right: 5px;
+    font-size: 16px;
   }
 `
-const Body = styled(Content)`
-  font-family: 'Open Sans';
+const Body = styled('div')`
+  font-family: 'Public Sans';
   font-weight: 400;
   font-size: 1.3em;
   max-width: 850px;
@@ -92,7 +99,6 @@ const Body = styled(Content)`
   @media (max-width: 600px) {
     padding: 10px 20px;
   }
-
 `
 
 const Heading2 = styled('h2')`
@@ -157,6 +163,7 @@ const Disclaimer = styled('p')`
 const Comments = styled('div')`
   max-width: 1000px;
   margin: 50px auto;
+  margin-bottom: 25vh;
 
   @media (max-width: 600px) {
     display: none;
