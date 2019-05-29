@@ -6,10 +6,9 @@ export default () => {
 
   return (
     <Hero>
-
-      <Image>
+      {/* <Image>
         <img src="/static/images/IMG_0131.png" />
-      </Image>
+      </Image> */}
       <Header>
         <SubTitle>elmasse</SubTitle>
         <Title>Max Fierro</Title>
