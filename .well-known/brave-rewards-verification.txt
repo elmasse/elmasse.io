@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: elmasse.io
+Token: ee03fad32740427f23e29e0c399c12f2d4bb2e99b176d9019d12b09c0747ee2d
