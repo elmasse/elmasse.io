@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/elmasse
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://elmasse.io
+  * I am elmasse (https://keybase.io/elmasse) on keybase.
+  * I have a public key ASBsXBqof-5I8KmYIAa-jfxTKoO8RdGYMr441mcFXs-fpgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01207079bc9cc103f6a7bb20553ae79fc911048f84738a02ada4ab2316eff6efe4350a",
+      "host": "keybase.io",
+      "kid": "01206c5c1aa87fee48f0a9982006be8dfc532a83bc45d19832be38d667055ecf9fa60a",
+      "uid": "13afa51da7e2c905ccdb0e47901a2719",
+      "username": "elmasse"
+    },
+    "merkle_root": {
+      "ctime": 1560799957,
+      "hash": "68ed08c2194a6a801fb1ea89f2d3d0b57d6cfbf1bd04ffc8722b6a4e618d6f1e175418640fb428791c46f3f8f631ca54a7bacf66a4bbcab5a53e22a5a6d3759d",
+      "hash_meta": "fa99cd66f2eaabf6a89956291e2470b3eca40da2e2903d33f218d3e3f2b89c40",
+      "seqno": 5588147
+    },
+    "service": {
+      "entropy": "+4klMIn/3HjUn0DA/u+FU6m0",
+      "hostname": "elmasse.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.1.0"
+  },
+  "ctime": 1560799967,
+  "expire_in": 504576000,
+  "prev": "df5fb350ba7e7bfb0859b12cfd4551cce380f9f9f5f7decb0e9d4158cbce58d4",
+  "seqno": 43,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgbFwaqH/uSPCpmCAGvo38UyqDvEXRmDK+ONZnBV7Pn6YKp3BheWxvYWTESpcCK8Qg31+zULp+e/sIWbEs/UVRzOOA+fn1997LDp1BWMvOWNTEIOgGLoW+DoRHsbecyUWxmJO2VPPxziNqk90j5ZsujMgbAgHCo3NpZ8RA6W1GYJ+rQSg8yQLA39Jw/hRx+BBptU+8EEo7SQpeq0Fdst01izTs/Typ6vMntE8vT9GlU9l3RByDTmpo8vCkCahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIGGDd7DrOylc82pKcPQ8GeTsSvM2PCCLFQk65ThURTiFo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/elmasse
+
+==================================================================
