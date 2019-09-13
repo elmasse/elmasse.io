@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/elmasse/elmasse.github.io#readme",
   "dependencies": {
+    "@geut/nextein-plugin-title-chicago-style": "^1.0.0",
     "babel-plugin-emotion": "^9.2.10",
     "cpr": "^3.0.1",
     "disqus-react": "^1.0.5",
