@@ -45,12 +45,13 @@ const Index = withPosts(({ posts }) => {
       </Head>
       <Hero />
       {
-        posts.map((post, idx) => {
-          const { title, url, date, tags } = post.data
+        posts.map(post => {
+          const { title, description, url, date, tags } = post.data
 
           return (
-            <Post key={`post-${idx}`}>
+            <Post key={`post-${url}`}>
               <Title><Link {...post}><a>{title}</a></Link></Title>
+              {description && <Description>{description}</Description>}
               <Meta>
                 <Moment format="MMMM D, YYYY">{date}</Moment>
                 <Tags tags={tags} />
@@ -61,7 +62,7 @@ const Index = withPosts(({ posts }) => {
           )
         })
       }
-      <About />
+      {/* <About /> */}
       <Footer />
     </div>
   )
@@ -88,6 +89,12 @@ const Title = styled('h1')`
     color: inherit;
   }
 `
+const Description = styled('p')`
+  color:  #999;
+  font-size: 1.5em;
+  margin-top: -1em;
+`
+
 const Meta = styled('div')`
   display: flex;
 

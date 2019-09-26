@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Moment from 'react-moment'
 import Head from 'next/head'
 import styled, { injectGlobal, hydrate } from 'react-emotion'
-import Disqus from 'disqus-react';
  
 import withPost, { Content } from 'nextein/post'
 
@@ -65,12 +64,6 @@ class Post extends Component {
         <Disclaimer>
           &#8250; Any viewpoints and opinions expressed in this article are my own and do not, in any way, reflect those of my employer, my colleagues, or anyone else. I speak only for myself, not for them.
         </Disclaimer>
-        { 
-          comments && 
-          <Comments>
-            <Disqus.DiscussionEmbed shortname="elmassegithubio" config={{title}} />
-          </Comments>
-        }
         <Footer />
       </div>
     )

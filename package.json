@@ -28,7 +28,6 @@
     "@geut/nextein-plugin-title-chicago-style": "^1.0.0",
     "babel-plugin-emotion": "^9.2.10",
     "cpr": "^3.0.1",
-    "disqus-react": "^1.0.5",
     "emotion": "^9.2.10",
     "emotion-server": "^9.2.10",
     "gh-pages": "^1.2.0",

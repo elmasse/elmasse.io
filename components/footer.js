@@ -24,7 +24,7 @@ const Footer = styled('div')`
   position: relative;
   background: #e5e5e5;
   height: 20vh;
-  // margin-top: 25vh;
+  margin-top: 25vh;
 
   &::before {
     content: "";
