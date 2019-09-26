@@ -1,5 +1,5 @@
 ---
-title: Babel. Webpack. Bundles & Packages.
+title: Babel or Webpack?
 description: Should I Transpile or Bundle My Code?
 tags: [webpack, babel, transpiler, bundler]
 category: js
@@ -7,17 +7,7 @@ permalink: /:category?/:name.html
 published: false
 ---
 
-This is a question that crossed my mind so many times: When do I need to use `webpack`?, or `rollup` (or any other bundler like `parcel`). When `babel` is just enough? I'm still not sure I have the right answer but, I'm gonna explain here for my future reference when and why I choose to use one or the other, or usually both.
-
----
-
-## Context 
-
-Last year I started to work on several projects. Libraries, websites, apps, SDKs, etc. Each of them have their own requirements and different audiences. How a library is consumed is completely different from how a website or an app is deployed. I have also experimented with monorepos (lerna) and workspaces (yarn). This post aims to describe a few different scenarios.
-
-### Monorepos / Workspaces modules
-
-There are a few decisions to make when you want to use a monorepo or workspace. How are you going to publish and consume your modules? What kind of modules do you have (micro-services, helpers, utils, components)? 
+Last year I started to work on several projects. Libraries, websites, apps, SDKs, etc. Each of them has its own requirements and different audiences. How a library is consumed is completely different from how a website or an app is deployed. I have also experimented with monorepos (lerna) and workspaces (yarn). This post aims to describe a few different scenarios.
 
 Let's start digging into the differences first between _Transpilers_ and _Bundlers_.
 
@@ -48,4 +38,8 @@ Bundlers are helpful to eliminate unused code, generate minified versions and op
 
 ## When to Use What?
 
+---
 
+### Monorepos / Workspaces modules
+
+There are a few decisions to make when you want to use a monorepo or workspace. How are you going to publish and consume your modules? What kind of modules do you have (micro-services, helpers, utils, components)? 
