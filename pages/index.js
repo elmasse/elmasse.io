@@ -7,6 +7,9 @@ import withPosts, { sortByDate } from 'nextein/posts'
 import { Content } from 'nextein/post'
 import Link from 'nextein/link'
 
+import 'typeface-montserrat';
+import 'typeface-public-sans';
+
 import Hero from '../components/hero'
 import Tags from '../components/tags'
 import About from '../components/about'
@@ -26,6 +29,15 @@ const Index = withPosts(({ posts }) => {
     html, body {
       margin: 0;
     }
+
+    body {
+      font-family: "Public Sans", sans-serif;
+    }
+
+    h1,h2,h3,h4 {
+      font-family: Montserrat;
+    }
+
     a {
       text-decoration: none;
       color: #0af;
@@ -57,7 +69,7 @@ const Index = withPosts(({ posts }) => {
                 <Tags tags={tags} />
                </Meta> 
               <Body {...post} excerpt />
-              <Link {...post} passHref><ReadMore>Continue reading </ReadMore></Link> 
+              <Link {...post} passHref><ReadMore>Read More </ReadMore></Link> 
             </Post>
           )
         })
@@ -73,10 +85,13 @@ export default withAnalytics(Index)
 
 
 const Post = styled('div')`
-  max-width: 850px;
-  margin: 70px auto;
-  @media (max-width: 600px) {
-    padding: 0 20px;
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 16px 30px;
+
+  @media (min-width: 880px) {
+    background: #fafafa;
+    box-shadow: 0px 2px 4px rgba(0,0,0,.15);  
   }
 `
 const Title = styled('h1')`
@@ -97,7 +112,7 @@ const Description = styled('p')`
 
 const Meta = styled('div')`
   display: flex;
-
+  margin: 32px 5px;
   > time {
     font-weight: 300;
     color: #444;
@@ -105,7 +120,6 @@ const Meta = styled('div')`
   }
 `
 const Body = styled(Content)`
-  font-family: 'Public Sans';
   font-weight: 400;
   font-size: 1.25em;
   line-height: 1.58;
@@ -114,14 +128,16 @@ const Body = styled(Content)`
   code {
     background: #f9f9f9;
     padding: 4px;
-    font-family: 'Public Sans';
     font-style: italic;
     font-weight: 400;
   }
 `
 const ReadMore = styled('a')`
-  :before {
-    content: '>';
-    padding: 0 5px;
-  }
+  margin: 24px 0;
+  display: block;
+
+  // :before {
+  //   content: '>';
+  //   padding: 0 5px;
+  // }
 `

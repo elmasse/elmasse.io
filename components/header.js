@@ -12,6 +12,10 @@ export default ({ title, description = '' }) => {
     <Header>
       <div>
         <a href="/"><Back fill="#212121" width="25" style={{padding: '10px 0', marginTop: '10px'}}/></a>
+        <TitleGroup>
+          <Title>{title}</Title>
+          <Description>{description}</Description>
+        </TitleGroup>
         <Social>
         {
           typeof window !== 'undefined' &&
@@ -21,11 +25,7 @@ export default ({ title, description = '' }) => {
             <Linkedin solid small message={message} link={window.location} />
           </React.Fragment>
         }
-        </Social>
-        <TitleGroup>
-          <Title>{title}</Title>
-          <Description>{description}</Description>
-        </TitleGroup>
+        </Social>        
       </div>
     </Header>
   )
@@ -55,7 +55,7 @@ const Header = styled('div') `
     border-style: solid;
   }
   > div {
-    width:1000px;
+    width: 800px;
     margin: 0px auto;
 
     @media (max-width:600px){
@@ -85,8 +85,8 @@ const TitleGroup = styled(`hgroup`) `
 `
 
 const Title = styled(`h1`) `
-  font-size: 4.5em;
-  font-weight: 800;
+  font-size: 4em;
+  font-weight: 700;
   letter-spacing: -0.02em;
   margin: 0;
   margin-left: -0.05em;
@@ -94,7 +94,7 @@ const Title = styled(`h1`) `
 `
 const Description = styled(`h2`) `
   font-size: 2.2em;
-  font-weight: 100;
+  font-weight: 200;
   margin-top: 0;
   color: #888;
 `

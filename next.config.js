@@ -1,8 +1,10 @@
 const { withNextein} = require('nextein/config')
+const withCSS = require('@zeit/next-css')
+const withFonts = require('next-fonts')
 const { ContextReplacementPlugin } = require('webpack')
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
-module.exports = withNextein({
+module.exports = withNextein(withCSS(withFonts({
   nextein: {
     plugins: [
       {
@@ -41,4 +43,4 @@ module.exports = withNextein({
 
     return config
   }
-})
+})))

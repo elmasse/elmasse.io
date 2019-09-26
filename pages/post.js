@@ -5,11 +5,15 @@ import styled, { injectGlobal, hydrate } from 'react-emotion'
  
 import withPost, { Content } from 'nextein/post'
 
+import 'typeface-montserrat';
+import 'typeface-public-sans';
+
 import Code from '../components/code'
 import Header from '../components/header'
 import Tags from '../components/tags'
 import Footer from '../components/footer'
 import withAnalytics from '../components/analytics'
+
 
 // Adds server generated styles to emotion cache.
 // '__NEXT_DATA__.ids' is set in '_document.js'
@@ -25,6 +29,15 @@ class Post extends Component {
       html, body {
         margin: 0;
       }
+
+      body {
+        font-family: Public Sans, sans-serif;
+      }
+  
+      h1,h2,h3,h4 {
+        font-family: Montserrat;
+      }
+  
       a {
         text-decoration: none;
         color: #0af;
@@ -83,10 +96,9 @@ const Meta = styled.div`
   }
 `
 const Body = styled('div')`
-  font-family: 'Public Sans';
   font-weight: 400;
   font-size: 1.3em;
-  max-width: 850px;
+  max-width: 800px;
   margin: 0 auto;
 
   @media (max-width: 600px) {
@@ -109,7 +121,6 @@ const Paragraph =styled('p')`
   code {
     background: #f9f9f9;
     padding: 4px;
-    font-family: 'Open Sans';
     font-style: italic;
     font-weight: 400;
 
@@ -141,7 +152,7 @@ const Divider = styled('hr')`
 `
 
 const Disclaimer = styled('p')`
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
   font-size: 1em;
   font-style: italic;
@@ -152,13 +163,4 @@ const Disclaimer = styled('p')`
   @media (max-width: 600px) {
     padding: 10px 20px;
   }  
-`
-const Comments = styled('div')`
-  max-width: 1000px;
-  margin: 50px auto;
-  margin-bottom: 25vh;
-
-  @media (max-width: 600px) {
-    display: none;
-  }
 `
