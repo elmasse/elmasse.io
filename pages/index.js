@@ -56,6 +56,7 @@ const Index = withPosts(({ posts }) => {
         <title>elmasse | Home</title>
       </Head>
       <Hero />
+      <List>
       {
         posts.map(post => {
           const { title, description, url, date, tags } = post.data
@@ -74,7 +75,7 @@ const Index = withPosts(({ posts }) => {
           )
         })
       }
-      {/* <About /> */}
+      </List>
       <Footer />
     </div>
   )
@@ -82,7 +83,12 @@ const Index = withPosts(({ posts }) => {
 
 export default withAnalytics(Index)
 
-
+const List = styled('div')`
+  @media (min-width: 880px) {
+    position: relative;
+    margin-top: -200px;
+  }
+`
 
 const Post = styled('div')`
   max-width: 800px;
@@ -99,6 +105,7 @@ const Title = styled('h1')`
   font-size: 2.5em;
   letter-spacing: -0.02em;
   margin-left: -0.05em;
+  line-height: 1;
   > a {
     text-decoration: none;
     color: inherit;

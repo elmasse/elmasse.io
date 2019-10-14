@@ -6,7 +6,7 @@ import { Twitter, Facebook, Linkedin } from 'react-social-sharing'
 import Back from './icons/back'
 
 
-export default ({ title, description = '' }) => {
+export default ({ title, description = '', children }) => {
   const message = `${title} ${description} via @elmasse`
   return (
     <Header>
@@ -23,9 +23,10 @@ export default ({ title, description = '' }) => {
             <Twitter solid small message={message} link={window.location} />
             <Facebook solid small message={message} link={window.location} />
             <Linkedin solid small message={message} link={window.location} />
+            {children}
           </React.Fragment>
         }
-        </Social>        
+        </Social>
       </div>
     </Header>
   )
@@ -35,14 +36,14 @@ const Header = styled('div') `
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  height: 75vh;
   background: #f3f3f3;
   background-image: linear-gradient(135deg,#f3f3f3 0%,#f3f3f3 50.99%,#f0f0f0 51%,#f0f0f0 100%);
   padding: 10px 20px;
 
   @media (max-width:600px){
     width: auto;
-    height: 95vh;
+    height: 75vh;
   }
 
   &::after {
@@ -91,6 +92,7 @@ const Title = styled(`h1`) `
   margin: 0;
   margin-left: -0.05em;
   margin-top: 32px;
+  line-height: 1;
 `
 const Description = styled(`h2`) `
   font-size: 2.2em;

@@ -21,7 +21,6 @@ export default () => {
 const Hero = styled('div')`
   position: relative;
   display: flex;
-  // flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 75vh;

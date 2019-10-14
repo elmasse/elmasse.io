@@ -56,14 +56,13 @@ class Post extends Component {
           <title>{`elmasse | ${title}`}</title>
         </Head>
         <Header title={title} description={description}>
-        </Header>
-
-        <Body>
           <Meta>
             <Moment format="MMMM D, YYYY">{date}</Moment>
             <Tags tags={tags} />
           </Meta>
+        </Header>
 
+        <Body>
           <Content {...post}
             renderers={{
               h2: Heading2,
@@ -100,10 +99,16 @@ const Body = styled('div')`
   font-size: 1.3em;
   max-width: 800px;
   margin: 0 auto;
+  padding: 10px 20px;
 
-  @media (max-width: 600px) {
-    padding: 10px 20px;
+  @media (min-width: 880px) {
+    position: relative;
+    margin-top: -200px;
+    padding: 20px 40px;
+    background: #fafafa;
+    box-shadow: 0px 2px 4px rgba(0,0,0,.15);
   }
+
 `
 
 const Heading2 = styled('h2')`
