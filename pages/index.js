@@ -68,7 +68,7 @@ const Index = withPosts(({ posts }) => {
               <Meta>
                 <Moment format="MMMM D, YYYY">{date}</Moment>
                 <Tags tags={tags} />
-               </Meta> 
+              </Meta> 
               <Body {...post} excerpt />
               <Link {...post} passHref><ReadMore>Read More </ReadMore></Link> 
             </Post>
@@ -106,6 +106,7 @@ const Title = styled('h1')`
   letter-spacing: -0.02em;
   margin-left: -0.05em;
   line-height: 1;
+
   > a {
     text-decoration: none;
     color: inherit;
@@ -114,7 +115,7 @@ const Title = styled('h1')`
 const Description = styled('p')`
   color:  #999;
   font-size: 1.5em;
-  margin-top: -1em;
+  margin-top: -.5em;
 `
 
 const Meta = styled('div')`
