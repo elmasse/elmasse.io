@@ -104,7 +104,9 @@ const Title = styled('h1')`
   color: #111;
   font-size: 2.5em;
   letter-spacing: -0.02em;
+  margin: .5em;
   margin-left: -0.05em;
+  margin-top: 1em;
   line-height: 1;
 
   > a {
@@ -113,9 +115,10 @@ const Title = styled('h1')`
   }
 `
 const Description = styled('p')`
+  margin-top: 0;
   color:  #999;
   font-size: 1.5em;
-  margin-top: -.5em;
+  font-weight: 300;
 `
 
 const Meta = styled('div')`

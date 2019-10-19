@@ -87,10 +87,11 @@ export default withAnalytics(withPost(Post))
 const Meta = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 2em;
-  margin-bottom: 4em;
+  // margin-top: 2em;
+  // margin-bottom: 4em;
   > time {
     padding-right: 5px;
+    font-weight: 300;
     font-size: 16px;
   }
 `

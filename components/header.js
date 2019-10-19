@@ -11,22 +11,22 @@ export default ({ title, description = '', children }) => {
   return (
     <Header>
       <div>
-        <a href="/"><Back fill="#212121" width="25" style={{padding: '10px 0', marginTop: '10px'}}/></a>
+        <a href="/"><Back fill="#212121" width="25" style={{padding: '10px 0', marginTop: '10px'}}/></a>                
         <TitleGroup>
-          <Title>{title}</Title>
-          <Description>{description}</Description>
-        </TitleGroup>
-        <Social>
+        {/* <Social>
         {
           typeof window !== 'undefined' &&
           <React.Fragment>
             <Twitter solid small message={message} link={window.location} />
             <Facebook solid small message={message} link={window.location} />
             <Linkedin solid small message={message} link={window.location} />
-            {children}
           </React.Fragment>
         }
-        </Social>
+        </Social>           */}
+          <Title>{title}</Title>
+          <Description>{description}</Description>
+        </TitleGroup>
+        {children}
       </div>
     </Header>
   )
@@ -58,9 +58,16 @@ const Header = styled('div') `
   > div {
     width: 800px;
     margin: 0px auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    margin-bottom: 200px;
 
     @media (max-width:600px){
       width: auto;
+      margin-bottom: 0;
     }
   
   }
@@ -82,7 +89,7 @@ const Social = styled('div')`
   }
 `
 const TitleGroup = styled(`hgroup`) `
-  margin: 24px 0;
+  // margin: 24px 0;
 `
 
 const Title = styled(`h1`) `
@@ -91,12 +98,12 @@ const Title = styled(`h1`) `
   letter-spacing: -0.02em;
   margin: 0;
   margin-left: -0.05em;
-  margin-top: 32px;
+  // margin-top: 32px;
   line-height: 1;
 `
 const Description = styled(`h2`) `
   font-size: 2.2em;
   font-weight: 200;
-  margin-top: 0;
+  margin: 0;
   color: #888;
 `
