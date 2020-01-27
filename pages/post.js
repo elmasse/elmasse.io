@@ -12,7 +12,6 @@ import Code from '../components/code'
 import Header from '../components/header'
 import Tags from '../components/tags'
 import Footer from '../components/footer'
-import withAnalytics from '../components/analytics'
 
 
 // Adds server generated styles to emotion cache.
@@ -82,7 +81,7 @@ class Post extends Component {
   }
 }
 
-export default withAnalytics(withPost(Post))
+export default withPost(Post)
 
 const Meta = styled.div`
   display: flex;

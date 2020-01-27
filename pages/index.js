@@ -14,7 +14,6 @@ import Hero from '../components/hero'
 import Tags from '../components/tags'
 import About from '../components/about'
 import Footer from '../components/footer'
-import withAnalytics from '../components/analytics'
 
 // Adds server generated styles to emotion cache.
 // '__NEXT_DATA__.ids' is set in '_document.js'
@@ -22,7 +21,7 @@ if (typeof window !== 'undefined') {
   hydrate(window.__NEXT_DATA__.ids)
 }
 
-const Index = withPosts(({ posts }) => {
+export default withPosts(({ posts }) => {
   posts.sort(sortByDate)
 
   injectGlobal`
@@ -80,8 +79,6 @@ const Index = withPosts(({ posts }) => {
     </div>
   )
 })
-
-export default withAnalytics(Index)
 
 const List = styled('div')`
   @media (min-width: 880px) {
