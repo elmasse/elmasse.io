@@ -5,14 +5,13 @@ import Link from 'nextein/link'
 import { formatWithOptions } from 'date-fns/fp'
 import { enUS } from 'date-fns/locale'
 
-
 export default function Hero({ post }) {
   const { title, description, readingTime, date } = post.data
   return (
     <div className="root">
       <div className="center">
         <div className="column header">
-          <h1>{title}</h1>
+          <h1><Link {...post}><a>{title}</a></Link></h1>
           <p>{description}</p>
           <p className="meta">
           { formatWithOptions({ locale: enUS }, 'MMM d, yyyy')(new Date(date))} · {readingTime} min read
@@ -68,6 +67,12 @@ export default function Hero({ post }) {
           line-height: .93;
           letter-spacing: -2px;
         }
+
+        h1 a, h1 a:visited {
+          text-decoration: none;
+          color: var(--gre900);
+        }
+
 
         .header p {
           padding-left: calc(var(--spacing) * (4 + 1));

@@ -64,7 +64,7 @@ const Featured = ({ post }) => {
   return (
     <Item post={post}>
       <div className="header">
-        <h1>{post.data.title}</h1>
+        <h1><Link {...post}><a>{post.data.title}</a></Link></h1>
         <div className="separator" />
         <p>{post.data.description}</p>
       </div>
@@ -78,10 +78,13 @@ const Featured = ({ post }) => {
           line-height: .9;
           letter-spacing: -1px;
         }
+        h1 a, h1 a:visited {
+          text-decoration: none;
+          color: var(--gre900);
+        }
         p {
           font-size: 1.5em;
         }
-
         .separator {
           margin: calc(var(--spacing) * 3) 0;
           width: calc(var(--spacing) * 12);
@@ -101,7 +104,7 @@ const Side = ({ post }) => {
   return (
     <Item post={post}>
       <div className="header">
-        <h1>{post.data.title}</h1>
+        <h1><Link {...post}><a>{post.data.title}</a></Link></h1>
         <p>{post.data.description}</p>
       </div>
       <div className="excerpt">
@@ -115,6 +118,10 @@ const Side = ({ post }) => {
           font-size: 2.5em;
           line-height: .9;
           letter-spacing: -1px;
+        }
+        h1 a, h1 a:visited {
+          text-decoration: none;
+          color: var(--gre900);
         }
         p {
           padding: calc(var(--spacing) * 2) 0;
@@ -134,7 +141,7 @@ const Post = ({ post }) => {
   return (
     <Item post={post}>
       <div className="header">
-        <h1>{post.data.title}</h1>
+        <h1><Link {...post}><a>{post.data.title}</a></Link></h1>
         <div className="separator" />
         <p>{post.data.description}</p>
       </div>
@@ -148,6 +155,10 @@ const Post = ({ post }) => {
           font-family: var(--font-family-heading);
           line-height: .9;
           letter-spacing: -1px;
+        }
+        h1 a, h1 a:visited {
+          text-decoration: none;
+          color: var(--gre900);
         }
         p {
           padding: var(--spacing);
