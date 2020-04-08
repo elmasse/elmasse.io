@@ -6,7 +6,7 @@ import withPost, { Content } from 'nextein/post'
 import Layout from '../components/layout'
 import Container from '../components/container'
 import Header from '../components/header'
-import { Heading2, Divider, Paragraph, Blockquote, Code, Pre } from '../components/elements'
+import { Heading2, Divider, Paragraph, Blockquote, Code, Pre, List, ListItem } from '../components/elements'
 
 export default withPost(({ post }) => {
   const { title, description, category, tags, date, url, readingTime } = post.data
@@ -27,6 +27,8 @@ export default withPost(({ post }) => {
               h2: Heading2,
               hr: Divider,
               p: Paragraph,
+              ul: List,
+              li: ListItem,
               blockquote: Blockquote,
               code: Code,
               pre: Pre
