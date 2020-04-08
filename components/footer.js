@@ -1,59 +1,65 @@
+import Link from 'next/link'
 
-import React from 'react'
-import styled from 'react-emotion'
+import Container from './container'
+import { Anchor } from './elements'
 
-export default () => {
-
+export default function Footer() {
   return (
-    <Footer>
-      <div>
-        <h2>elmasse</h2>
-        <p>
-          Max Fierro &copy; 2013-{+new Date().getFullYear()}
+    <footer>
+      <Container>
+        <h1><Link href="/"><a>elmasse.io</a></Link></h1>
+        <p className="license">
+          <Anchor rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+            <img height="24px" alt="Creative Commons License" src="/static/images/cc.svg" />
+            <img height="24px" alt="Creative Commons License BY" src="/static/images/cc-by.svg" />
+          </Anchor>
         </p>
-        <div>
-        Built with ♥︎ and <a href="https://nextein.now.sh">nextein</a> by <a href="https://github.com/elmasse">/<span>elmasse</span></a>
-        </div>
-      </div>
-    </Footer>
+        <p className="license">
+          This work is licensed under a &nbsp;
+          <Anchor rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</Anchor>.
+        </p>
+        <p className="built">
+          Built with ♥︎ and <Anchor href="https://nextein.elmasse.io">nextein</Anchor> by <Anchor href="https://github.com/elmasse">/<span>elmasse</span></Anchor>
+        </p>
+      </Container>
+      <style jsx>{`
+        footer {
+          background: var(--grey100);
+          border-top: 1px solid var(--grey200);
+          padding: calc(var(--spacing) * 4) 0;
+        }
+
+        footer :global(.container) {
+          display: flex;
+          flex-direction: column;
+        }
+
+        h1 {
+          font-size: 1.5em;
+        }
+
+        h1 > a, h1 > a:visited {
+          text-decoration: none;
+          color: var(--main-color);
+        }
+
+        p {
+          font-size: .8rem;
+          color: var(--grey700);
+        }
+
+        .license {
+          align-self: flex-end;
+          text-align: right;
+          max-width: 350px;
+        }
+
+        .built {
+          padding-top: calc(var(--spacing) * 4);
+          align-self: flex-end;
+        }
+
+      `}</style>
+    </footer>
   )
 }
-
-const Footer = styled('div')`
-  display: flex;
-  position: relative;
-  background: #e5e5e5;
-  height: 20vh;
-  margin-top: 25vh;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -25vh;
-    left: 0;
-    border-width: 25vh 0 0 100vw;
-    border-color: transparent #e5e5e5 transparent;
-    border-style: solid;
-  }
-
-  & > div {
-    min-width: 1000px;
-    margin: 0 auto;
-
-    @media (max-width: 600px) {
-      min-width: auto;
-      padding: 10px 20px; 
-      margin: 0 0;
-    }
-  }
-
-  & h2 {
-    margin: 0;
-  }
-
-  & p {
-    margin: 0 0 30px 0;
-    font-weight: 300;
-  }
-
-`
