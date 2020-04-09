@@ -30,7 +30,7 @@
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "date-fns": "^2.11.1",
     "next": "^9.3.4",
-    "nextein": "^2.3.4",
+    "nextein": "^2.4.0-beta.0",
     "nextein-plugin-reading-time": "^1.0.0",
     "prismjs": "^1.19.0",
     "react": "^16.12.0",
