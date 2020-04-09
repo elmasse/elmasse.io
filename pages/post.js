@@ -43,7 +43,7 @@ export default withPost(({ post }) => {
       <style jsx>{`
         .header {
           /* background by SVGBackgrounds.com */
-          background-image: url("/static/images/wavey-fingerprint-1.svg");
+          background-image: var(--wavy-image);
           background-attachment: fixed;
         }
         article {

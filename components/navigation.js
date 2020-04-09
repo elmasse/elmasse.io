@@ -20,14 +20,14 @@ export default function Navigation() {
       <style jsx>{`
         .root {
           position: sticky;
-          background: rgba(255,255,255, .9);
+          background: var(--light-alpha);
           z-index: 10;
           top: 0;
           height: calc(var(--spacing) * 12);
           transition: all ease-in 150ms;
           display: flex;
           align-items: center;
-          border-bottom: 1px solid #e4e4e4;
+          border-bottom: 1px solid var(--grey100);
         }
 
         .root.shrink {

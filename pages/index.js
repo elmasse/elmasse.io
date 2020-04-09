@@ -30,7 +30,7 @@ export default withPosts(({ posts }) => {
       <style jsx>{`
         .hero {
           /* background by SVGBackgrounds.com */
-          background-image: url("/static/images/wavey-fingerprint-1.svg");
+          background-image: var(--wavy-image);
           background-attachment: fixed;
         }
         .grid {
