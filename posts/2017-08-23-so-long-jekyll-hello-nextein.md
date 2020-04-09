@@ -15,16 +15,16 @@ So here I am. I'm gonna try to give you a hint of what I did for getting this bl
 
 ## Jekyll
 
-`jekyll` is the _defacto_ for Github Pages. There are some concepts in `jekyll` (such as Layouts & Includes) that can be easily mapped to React components and other abstractions. 
+Jekyll is the _defacto_ for Github Pages. There are some concepts in jekyll (such as Layouts & Includes) that can be easily mapped to React components and other abstractions. 
 
 ## Nextein
 
-As I mentioned, `nextein` is based on `next.js`. `next.js` is  **a minimalistic framework for server-rendered React applications**. In version 3 they added the feature to _export_ static html. That is **exactly** what I wanted for a blog engine: React server-rendering and generated static html.
-`nextein` is an addition on top of `next.js` to simplify using `Markdown` to generate posts / pages.
+As I mentioned, nextein is based on next.js. next.js is  **a minimalistic framework for server-rendered React applications**. In version 3 they added the feature to _export_ static html. That is **exactly** what I wanted for a blog engine: React server-rendering and generated static html.
+nextein is an addition on top of next.js to simplify using Markdown to generate posts / pages.
 
 ## Migrating to nextein
 
-First of all, we need `node.js` and `npm`. To get started we will need to create our `npm project` and install all dependencies: 
+First of all, we need node.js and npm. To get started we will need to create our npm project and install all dependencies: 
 
 ```bash
 npm init -y
@@ -189,7 +189,7 @@ export default withPost(({ post }) => {
 We can now run our dev server with `npm run dev` or export the site as a static version with `npm run export`
 
 
-## Deploying with GithubPages 
+## Deploying with Github Pages 
 
 One thing we need to add to our generated directory is an empty file `.nojekyll`. This is necessary since GithubPages will ignore files and folder that starts with underscore. Such as the case of the `_next` folder.
 
@@ -211,7 +211,7 @@ We can  add that file and copy it over the distribution directory (`./out` by de
 
 ```
 
-We are now ready to do the actual deploy to GithubPages. I have used `gh-pages` module to commit the generated code to the desired branch.
+We are now ready to do the actual deploy to Github Pages. I have used `gh-pages` module to commit the generated code to the desired branch.
 
 If we are using a normal repository, we can push to a `gh-pages` branch, or change the distribution folder to point to `/docs`. The former is simpler and we have a separated branch for the code and the site files.
 

@@ -1,46 +1,38 @@
 const { withNextein} = require('nextein/config')
-const withCSS = require('@zeit/next-css')
-const withFonts = require('next-fonts')
-const { ContextReplacementPlugin } = require('webpack')
-// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
-module.exports = withNextein(withCSS(withFonts({
+module.exports = withNextein({
   nextein: {
     plugins: [
       {
-        name: 'nextein-plugin-markdown'
+        name: 'nextein-plugin-markdown',
+        options: {
+          position: true, // need this for reading-time plugin.
+          raw: false,
+          rehype: ['rehype-slug', 'rehype-autolink-headings', '@mapbox/rehype-prism']
+        }
+      },
+      {
+        name: 'nextein-plugin-reading-time',
       },
       {
         name: '@geut/nextein-plugin-title-chicago-style',
-        options: {          
+        options: {
+          frontMatter: ['title', 'description'],
           special: [
             'elmasse', 
             'npm',
+            'CocktailJS',
             'cmd-plus',
             'elmasse-bundle',
             'Ext.ux.Cover',
             'Ext.i18n.Bundle',
-            'GithubPages',
             'ES7', 'ES6', 'JWT', 'ExtJS'
           ]
         }
+      },
+      {
+        name: './plugins/remove-position'
       }
     ]
-  },
-  webpack: (config) => {
-    config.plugins.push(
-      // new BundleAnalyzerPlugin({
-      //   analyzerMode: 'static',
-      //   analyzerPort: 8888,
-      //   openAnalyzer: false,
-      //   generateStatsFile: true
-      // }),
-      new ContextReplacementPlugin(
-        /moment[\/\\]locale$/,
-        /en/
-      )      
-    )
-
-    return config
   }
-})))
+})

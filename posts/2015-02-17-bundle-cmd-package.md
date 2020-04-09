@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "elmasse-bundle: A Sencha Cmd Package"
+description: Internationalization for ExtJS.
 category: extjs
 tags: [extjs, cmd, i18n, package]
 permalink: /:category?/:name.html

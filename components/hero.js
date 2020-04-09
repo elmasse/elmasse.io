@@ -1,74 +1,108 @@
-
 import React from 'react'
-import styled from 'react-emotion'
 
-export default () => {
+import Content from 'nextein/content'
+import Link from 'nextein/link'
+import { formatWithOptions } from 'date-fns/fp'
+import { enUS } from 'date-fns/locale'
 
+export default function Hero({ post }) {
+  const { title, description, readingTime, date } = post.data
   return (
-    <Hero>
-      {/* <Image>
-        <img src="/static/images/IMG_0131.png" />
-      </Image> */}
-      <Header>
-        <SubTitle>elmasse</SubTitle>
-        <Title>Max Fierro</Title>
-        <Description>Javascript Developer</Description>
-      </Header>
-    </Hero>
+    <div className="root">
+      <div className="center">
+        <div className="column header">
+          <h1><Link {...post}><a>{title}</a></Link></h1>
+          <p>{description}</p>
+          <p className="meta">
+          { formatWithOptions({ locale: enUS }, 'MMM d, yyyy')(new Date(date))} · {readingTime} min read
+          </p>
+        </div>
+        <div className="column excerpt">
+          <Content {...post} excerpt />
+          <Link {...post} passHref>
+            <a className="action">read post</a>
+          </Link>
+        </div>
+      </div>
+
+      <style jsx>{`
+        .root {
+          min-height: calc(100vh - calc(var(--spacing) * 12));
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-items: center;
+        }
+
+        .center {
+          display: flex;
+        }
+
+        .column {
+          flex: 1;
+          padding: 0 calc(var(--spacing) * 2);
+        }
+
+        @media (max-width: 780px) {
+          .center { flex-direction: column; }
+          .column {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: calc(var(--spacing) * 4) 0;
+          }
+        }
+
+        .header {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .header h1 {
+          margin-bottom: calc(var(--spacing) * 2);
+          border-left: var(--spacing) solid var(--action-color);
+          padding-left: calc(var(--spacing) * 4);
+          font-family: var(--font-family-heading);
+          font-size: 4.5em;
+          font-weight: 700;
+          line-height: .93;
+          letter-spacing: -2px;
+        }
+
+        h1 a, h1 a:visited {
+          text-decoration: none;
+          color: var(--gre900);
+        }
+
+
+        .header p {
+          padding-left: calc(var(--spacing) * (4 + 1));
+          font-size: 1.35em;
+          color: var(--grey700);
+          letter-spacing: -0.5px;
+        }
+
+        .header .meta {
+          padding-top: calc(var(--spacing) * 2);
+          font-size: .9em;
+          color: var(--grey600);
+        }
+        
+        .excerpt {
+          line-height: 1.54;
+          font-size: 1.2em;
+          color: var(--grey700);
+        }
+
+        .excerpt .action {
+          margin-top: calc(var(--spacing) * 4);
+          text-transform: uppercase;
+          font-weight: 800;
+          font-size: 0.9em;
+          display: inline-block;
+          text-decoration: none;
+          color: var(--action-color);
+        }
+      `}</style>
+    </div>
   )
 }
-
-const Hero = styled('div')`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 75vh;
-  background: #f3f3f3;
-  background-image: linear-gradient(135deg,#f3f3f3 0%,#f3f3f3 50.99%,#eee 51%,#eee 100%);
-  padding: 10px 20px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-width: 25vh 0 0 100vw;
-    border-color: transparent #fff transparent;
-    border-style: solid;
-  }
-`
-const Header = styled('div')`
-  // @media (max-width: 600px) {
-  //   width: auto;
-  //   margin: 0px;
-    
-  // }
-`
-const Title = styled(`h1`)`
-  font-size: 5.5em;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin: 0;
-  margin-left: -0.05em;
-  margin-bottom: 0px;  
-`
-const SubTitle = styled(`h2`)`
-  font-size: 2em;
-  font-weight: 400;
-  margin: 0;
-`
-const Description = styled(`h1`)`
-  font-size: 2em;
-  font-weight: 100;
-  margin-top: 0;
-  color: #888;
-`
-
-const Image = styled(`div`)`
-  height: 18em;
-  margin: 3em;
-  > img {
-    height: 100%;
-  }
-`;
