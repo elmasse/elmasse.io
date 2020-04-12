@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Head from 'next/head'
  
 import withPost, { Content } from 'nextein/post'
@@ -6,7 +6,7 @@ import withPost, { Content } from 'nextein/post'
 import Layout from '../components/layout'
 import Container from '../components/container'
 import Header from '../components/header'
-import { Heading2, Divider, Paragraph, Blockquote, Code, Pre, List, ListItem } from '../components/elements'
+import { Heading2, Divider, Paragraph, Blockquote, Code, Pre, List, ListItem, Anchor } from '../components/elements'
 
 export default withPost(({ post }) => {
   const { title, description, category, tags, date, url, readingTime } = post.data
@@ -24,6 +24,7 @@ export default withPost(({ post }) => {
           <Container>
           <Content {...post}
             renderers={{
+              a: Anchor,
               h2: Heading2,
               hr: Divider,
               p: Paragraph,

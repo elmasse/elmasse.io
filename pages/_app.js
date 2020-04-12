@@ -4,10 +4,9 @@ import NextApp from 'next/app'
 import 'prismjs/themes/prism-twilight.css';
 
 export default class App extends NextApp {
-
   render () {
-    const { Component, pageProps } = this.props;
-    const dark = true // typeof window !== undefined && !!localStorage.getItem('__is_dark')
+    const { Component, pageProps } = this.props
+
     return (
       <Fragment>
         <style jsx global>{`
@@ -36,28 +35,36 @@ export default class App extends NextApp {
             --wavy-image: url("/static/images/wavey-fingerprint-light.svg");
 
             --main-color: var(--grey700);
-            --main-contrast-color: var(--grey200);
-          }
-          ${dark ? `
-          :root{
-
-            --light: #000;
-            --grey50: #181818;
-            --grey100: #212121;
-            --grey200: #424242;
-            --grey300: #757575;
-            --grey400: #9e9e9e;
-            --grey500: #bdbdbd;
-            --grey600: #d5d5d5;
-            --grey700: #e4e4e4;
-            --grey800: #f0f0f0;
-            --grey900: #fafafa;
-            --dark: #fff;
-
-            --light-alpha: rgba(0,0,0, .9);
-            --wavy-image: url("/static/images/wavey-fingerprint-dark.svg");
             
-          }`: ''}
+            --palette-color-1: #dbdeca;
+            --palette-color-2: #94bcbc;
+            --palette-color-3: #bee4e6;
+            
+          }
+          
+          @media (prefers-color-scheme: dark)  {
+            :root{
+              --light: #111;
+              --grey50: #181818;
+              --grey100: #212121;
+              --grey200: #424242;
+              --grey300: #757575;
+              --grey400: #9e9e9e;
+              --grey500: #bdbdbd;
+              --grey600: #d5d5d5;
+              --grey700: #e4e4e4;
+              --grey800: #f0f0f0;
+              --grey900: #fafafa;
+              --dark: #fff;
+  
+              --light-alpha: rgba(24,24,24, .9);
+              --wavy-image: url("/static/images/wavey-fingerprint-dark.svg");
+  
+              --palette-color-1: #494a43;
+              --palette-color-2: #333f40;
+              --palette-color-3: #526465;              
+            }
+          }
 
           * {
             box-sizing: border-box;

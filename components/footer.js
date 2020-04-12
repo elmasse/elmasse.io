@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import Container from './container'
 import { Anchor } from './elements'
+import { CC, BY } from './icons/creative-commons'
 
 export default function Footer() {
   return (
@@ -10,8 +11,10 @@ export default function Footer() {
         <h1><Link href="/"><a>elmasse.io</a></Link></h1>
         <p className="license">
           <Anchor rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-            <img height="24px" alt="Creative Commons License" src="/static/images/cc.svg" />
-            <img height="24px" alt="Creative Commons License BY" src="/static/images/cc-by.svg" />
+            <CC height="24px"/>
+            <BY height="24px"/>
+            {/* <img height="24px" alt="Creative Commons License" src="/static/images/cc.svg" />
+            <img height="24px" alt="Creative Commons License BY" src="/static/images/cc-by.svg" /> */}
           </Anchor>
         </p>
         <p className="license">

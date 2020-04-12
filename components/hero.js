@@ -5,6 +5,8 @@ import Link from 'nextein/link'
 import { formatWithOptions } from 'date-fns/fp'
 import { enUS } from 'date-fns/locale'
 
+import { Anchor } from './elements'
+
 export default function Hero({ post }) {
   const { title, description, readingTime, date } = post.data
   return (
@@ -18,7 +20,7 @@ export default function Hero({ post }) {
           </p>
         </div>
         <div className="column excerpt">
-          <Content {...post} excerpt />
+          <Content {...post} renderers={{ a: Anchor }} excerpt />
           <Link {...post} passHref>
             <a className="action">read post</a>
           </Link>
