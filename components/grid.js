@@ -2,6 +2,8 @@ import React from 'react'
 import Content from 'nextein/content'
 import Link from 'nextein/link'
 
+import { Anchor } from './elements'
+
 export default function Grid({ featured, side, posts }) {
   return (
     <div className="grid">
@@ -46,13 +48,13 @@ export default function Grid({ featured, side, posts }) {
           }
 
           .cell:nth-child(3n+1) :global(.item){
-            background-color: #dbdeca;
+            background-color: var(--palette-color-1);
           }
           .cell:nth-child(3n+2) :global(.item){
-            background-color: #94bcbc;
+            background-color: var(--palette-color-2);
           }
-          .cell:nth-child(3n+2) :global(.item){
-            background-color: #bee4e6;
+          .cell:nth-child(3n+3) :global(.item){
+            background-color: var(--palette-color-3);
           }
         }
       `}</style>
@@ -69,7 +71,7 @@ const Featured = ({ post }) => {
         <p>{post.data.description}</p>
       </div>
       <div className="excerpt">
-        <Content {...post} excerpt/>
+        <Content {...post} renderers={{ a: Anchor }} excerpt/>
       </div>
       <style jsx>{`
         h1 {
@@ -108,7 +110,7 @@ const Side = ({ post }) => {
         <p>{post.data.description}</p>
       </div>
       <div className="excerpt">
-        <Content {...post} excerpt/>
+        <Content {...post} renderers={{ a: Anchor }} excerpt/>
       </div>
       <style jsx>{`
         h1 {
