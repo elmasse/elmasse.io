@@ -1,7 +1,7 @@
 # Personal Blog
 
-[elmasse.io](https://elmasse.io)
-[elmasse.github.io](https://elmasse.github.io)
+- [elmasse.io](https://elmasse.io)
+- [elmasse.github.io](https://elmasse.github.io)
 
 ## Stack
 
