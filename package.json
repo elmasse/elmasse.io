@@ -28,9 +28,9 @@
     "@geut/nextein-plugin-title-chicago-style": "^1.1.1",
     "@mapbox/rehype-prism": "^0.4.0",
     "@n8tb1t/use-scroll-position": "^1.0.43",
-    "date-fns": "^2.12.0",
-    "next": "^9.3.6",
-    "nextein": "^2.5.0",
+    "date-fns": "^2.14.0",
+    "next": "^9.4.4",
+    "nextein": "^2.5.1",
     "nextein-plugin-reading-time": "^1.0.0",
     "prismjs": "^1.20.0",
     "react": "^16.12.0",
@@ -42,6 +42,6 @@
   "devDependencies": {
     "cpr": "^3.0.1",
     "gh-pages": "^2.2.0",
-    "webpack-bundle-analyzer": "^3.7.0"
+    "webpack-bundle-analyzer": "^3.8.0"
   }
 }
