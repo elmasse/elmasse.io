@@ -2,7 +2,7 @@ import React from 'react'
 import Content from 'nextein/content'
 import Link from 'nextein/link'
 
-import { Anchor } from './elements'
+import { Anchor } from 'elems'
 
 export default function Grid({ featured, side, posts }) {
   return (

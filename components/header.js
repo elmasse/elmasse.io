@@ -3,7 +3,6 @@ import React from 'react'
 import { formatWithOptions } from 'date-fns/fp'
 import { enUS } from 'date-fns/locale'
 
-
 export default function Header({ title, subtitle, meta: { date, readingTime } = {} }) {
   return (
     <div className="root">
