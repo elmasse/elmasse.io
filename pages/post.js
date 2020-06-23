@@ -52,28 +52,7 @@ export default withPost(({ post }) => {
           color: var(--grey500);
           background-color: var(--grey50);
         }
-      `}</style>
-      {/* 
-      <Header title={title} description={description}>
-        <Meta>
-          <Moment format="MMMM D, YYYY">{date}</Moment>
-          <Tags tags={tags} />
-        </Meta>
-      </Header>
-
-      <Body>
-        <Content {...post}
-          renderers={{
-            h2: Heading2,
-            hr: Divider,
-            p: Paragraph,
-            blockquote: Blockquote,
-            code: Code
-          }}
-        />
-      </Body>
-      
-      <Footer /> */}
+      `}</style>      
     </Layout>
   )
 });
