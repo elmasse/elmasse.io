@@ -6,7 +6,6 @@ import { formatWithOptions } from 'date-fns/fp'
 import { enUS } from 'date-fns/locale'
 
 import { Anchor } from 'elems'
-import renderers from 'elems/renderers'
 
 export default function Hero({ post }) {
   const { title, description, readingTime, date } = post.data
@@ -21,7 +20,7 @@ export default function Hero({ post }) {
           </p>
         </div>
         <div className="column excerpt">
-          <Content {...post} renderers={renderers} excerpt />
+          <Content {...post} renderers={{ a: Anchor }} excerpt />
           <Link {...post} passHref>
             <a className="action">read post</a>
           </Link>
