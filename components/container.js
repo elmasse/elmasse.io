@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function Container({ children }) {
+export default function Container({ className = '', children }) {
   return (
-    <div className="container">
+    <div className={`container ${className}`}>
       {children}
       <style jsx>{`
         .container {

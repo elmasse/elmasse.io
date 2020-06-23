@@ -11,4 +11,4 @@
 
 ## Deploy
 
-This site is deployed using `now` v2. It is also deployed on `Github Pages`.
+This site is deployed using Vercel. It is also deployed on `Github Pages`.

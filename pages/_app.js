@@ -11,37 +11,44 @@ export default class App extends NextApp {
       <Fragment>
         <style jsx global>{`
           :root {
-            --font-base: 16px;
+            --base-font-size: 16px;
+            --base-line-height: calc(32 / 21);
             --font-family-heading: 'PT Serif';
             --font-family-body: 'Lato';
             --spacing: 8px;
-
-            --light: #fff;
-            --grey50: #fafafa;
-            --grey100: #f0f0f0;
-            --grey200: #e4e4e4;
-            --grey300: #d5d5d5;
-            --grey400: #bdbdbd;
-            --grey500: #9e9e9e;
-            --grey600: #757575;
-            --grey700: #424242;
-            --grey800: #212121;
-            --grey900: #181818;
-            --dark: #000;
-
-            --action-color: #f60;
-            --light-alpha: rgba(255,255,255, .9);
             
-            --wavy-image: url("/static/images/wavey-fingerprint-light.svg");
-
+            --action-color: #f60;
             --main-color: var(--grey700);
             
-            --palette-color-1: #dbdeca;
-            --palette-color-2: #94bcbc;
-            --palette-color-3: #bee4e6;
-            
+            --p-font-size: 21px;
+            --h2-margin: calc(var(--spacing) * 8) 0 calc(var(--spacing) * 2) -2px;
+            font-size: var(--base-font-size);
           }
-          
+
+          @media (prefers-color-scheme: light)  {
+            :root{
+              --light: #fff;
+              --grey50: #fafafa;
+              --grey100: #f0f0f0;
+              --grey200: #e4e4e4;
+              --grey300: #d5d5d5;
+              --grey400: #bdbdbd;
+              --grey500: #9e9e9e;
+              --grey600: #757575;
+              --grey700: #424242;
+              --grey800: #212121;
+              --grey900: #181818;
+              --dark: #000;
+
+              --light-alpha: rgba(255,255,255, .9);
+              --wavy-image: url("/static/images/wavey-fingerprint-light.svg");
+
+              --palette-color-1: #dbdeca;
+              --palette-color-2: #94bcbc;
+              --palette-color-3: #bee4e6;
+            }
+          }
+
           @media (prefers-color-scheme: dark)  {
             :root{
               --light: #111;
@@ -77,7 +84,7 @@ export default class App extends NextApp {
             background-color: var(--light);
             color: var(--dark);
             font-family: var(--font-family-body), -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
-            font-size: var(--font-base);
+            font-size: var(--base-font-size);
           }
 
         `}</style>

@@ -29,6 +29,7 @@
     "@mapbox/rehype-prism": "^0.4.0",
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "date-fns": "^2.14.0",
+    "elems": "^1.0.0-beta.3",
     "next": "^9.4.4",
     "nextein": "^2.5.1",
     "nextein-plugin-reading-time": "^1.0.0",
