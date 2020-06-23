@@ -1,17 +1,13 @@
 {
-  "name": "elmasse.github.io",
+  "name": "elmasse.io",
   "version": "1.0.0",
-  "description": "elmasse.github.io",
+  "description": "elmasse.io",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nextein",
     "export": "nextein build && nextein export",
-    "now-dev": "npm run dev",
-    "now-build": "npm run export && npm run copy-wellknown",
     "copy-wellknown": "cpr .well-known out/.well-known",
-    "copy-nojekyll": "cpr .nojekyll out/.nojekyll",
-    "deploy": "npm run copy-nojekyll && gh-pages -t -d out -b master -r https://elmasse:$GH_TOKEN@github.com/elmasse/elmasse.github.io.git"
+    "now-build": "npm run export && npm run copy-wellknown"
   },
   "repository": {
     "type": "git",
@@ -41,8 +37,6 @@
     "unist-util-remove-position": "^2.0.1"
   },
   "devDependencies": {
-    "cpr": "^3.0.1",
-    "gh-pages": "^2.2.0",
-    "webpack-bundle-analyzer": "^3.8.0"
+    "cpr": "^3.0.1"
   }
 }
