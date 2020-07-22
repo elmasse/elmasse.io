@@ -2,7 +2,7 @@ import React from 'react'
 import Content from 'nextein/content'
 import Link from 'nextein/link'
 
-import { Anchor } from 'elems'
+import renderers from 'elems/renderers'
 
 export default function Grid({ featured, side, posts }) {
   return (
@@ -71,7 +71,7 @@ const Featured = ({ post }) => {
         <p>{post.data.description}</p>
       </div>
       <div className="excerpt">
-        <Content {...post} renderers={{ a: Anchor }} excerpt/>
+        <Content {...post} renderers={renderers} excerpt/>
       </div>
       <style jsx>{`
         h1 {
@@ -110,7 +110,7 @@ const Side = ({ post }) => {
         <p>{post.data.description}</p>
       </div>
       <div className="excerpt">
-        <Content {...post} renderers={{ a: Anchor }} excerpt/>
+        <Content {...post} renderers={renderers} excerpt/>
       </div>
       <style jsx>{`
         h1 {
