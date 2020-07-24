@@ -1,78 +1,24 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import Content from 'nextein/content'
 import Link from 'nextein/link'
-
+import Clamp from 'clamp-js'
+import { formatWithOptions } from 'date-fns/fp'
+import { enUS } from 'date-fns/locale'
 import { Anchor } from 'elems'
 
-export default function Grid({ featured, side, posts }) {
-  return (
-    <div className="grid">
-      {featured && <div className="cell featured"><Featured post={featured} /></div>}
-      {side && <div className="cell side"><Side post={side} /></div>}
-      {posts.map(post => (
-        <div key={post.data.url} className="cell"><Post post={post} /></div>
-      ))}
-
-      <style jsx>{`
-        .grid{
-          display: grid;
-          grid-template-columns: repeat(12, 1fr);
-          grid-auto-rows: 100px;
-          grid-gap: calc(var(--spacing) * 2);
-        }
-
-        .cell {
-          grid-column: span 4;
-          grid-row: span 3;
-          display: grid;
-          justify-items: stretch;
-        }
-
-        .featured {
-          grid-column: span 8;
-          grid-row: span 5;
-        }
-
-        .side {
-          grid-column: span 4;
-          grid-row: span 5;
-        }
-
-        @media (max-width: 780px) {
-          .grid {
-            grid-gap: 0;
-          }
-          
-          .cell, .featured, .side {
-            grid-column: span 12;
-          }
-
-          .cell:nth-child(3n+1) :global(.item){
-            background-color: var(--palette-color-1);
-          }
-          .cell:nth-child(3n+2) :global(.item){
-            background-color: var(--palette-color-2);
-          }
-          .cell:nth-child(3n+3) :global(.item){
-            background-color: var(--palette-color-3);
-          }
-        }
-      `}</style>
-    </div>
-  )
-}
-
-const Featured = ({ post }) => {
+export const Featured = ({ post }) => {
+  const { title, description, readingTime, date } = post.data
   return (
     <Item post={post}>
       <div className="header">
-        <h1><Link {...post}><a>{post.data.title}</a></Link></h1>
+        <h1><Link {...post}><a>{title}</a></Link></h1>
         <div className="separator" />
-        <p>{post.data.description}</p>
+        <p>{description}</p>
+        <p className="meta">
+          { formatWithOptions({ locale: enUS }, 'MMM d, yyyy')(new Date(date))} · {readingTime} min read
+        </p>
       </div>
-      <div className="excerpt">
-        <Content {...post} renderers={{ a: Anchor }} excerpt/>
-      </div>
+      <Excerpt post={post} clamp={10}/>
       <style jsx>{`
         h1 {
           font-family: var(--font-family-heading);
@@ -86,32 +32,38 @@ const Featured = ({ post }) => {
         }
         p {
           font-size: 1.5em;
+          padding: calc(var(--spacing) * 2) 0;
         }
+        p.meta {
+          padding-top: 0;
+          padding-bottom: calc(var(--spacing) * 3);
+          font-size: .85em;
+          color: var(--grey600);
+        }        
         .separator {
-          margin: calc(var(--spacing) * 3) 0;
+          margin-top: calc(var(--spacing) * 3);
           width: calc(var(--spacing) * 12);
           height: 4px;
           background-color: var(--action-color);
-        }
-        .excerpt {
-          font-size: 1.25em;
-          color: var(--grey600);
         }
       `}</style>
     </Item>
   );
 }
 
-const Side = ({ post }) => {
+export const Side = ({ post }) => {
+  const { title, description, readingTime, date } = post.data
+
   return (
     <Item post={post}>
       <div className="header">
-        <h1><Link {...post}><a>{post.data.title}</a></Link></h1>
-        <p>{post.data.description}</p>
+        <h1><Link {...post}><a>{title}</a></Link></h1>
+        <p>{description}</p>
+        <p className="meta">
+          { formatWithOptions({ locale: enUS }, 'MMM d, yyyy')(new Date(date))} · {readingTime} min read
+        </p>
       </div>
-      <div className="excerpt">
-        <Content {...post} renderers={{ a: Anchor }} excerpt/>
-      </div>
+      <Excerpt post={post} />
       <style jsx>{`
         h1 {
           border-left: 4px solid var(--action-color);
@@ -129,17 +81,45 @@ const Side = ({ post }) => {
           padding: calc(var(--spacing) * 2) 0;
           font-size: 1.25em;
         }
-        .excerpt {
-          align-self: end;
-          font-size: 1.125em;
+        p.meta {
+          padding-top: 0;
+          padding-bottom: calc(var(--spacing) * 3);
+          font-size: .85em;
           color: var(--grey600);
-        }
+        }            
       `}</style>
     </Item>
   );
 }
 
-const Post = ({ post }) => {
+
+const Excerpt = ({ post, clamp = 7 }) => {
+  const textEl = useRef(null)
+  useEffect(() => {
+    Clamp(textEl.current, { clamp, useNativeClamp: false })
+  }, [])
+  return (
+    <div className="excerpt">
+      <Content ref={textEl} {...post} renderers={{ a: Anchor }} excerpt/>
+      <style jsx>{`
+        .excerpt {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          font-size: 1em;
+          line-height: 1.51;
+          color: var(--grey600);
+        }
+
+        .excerpt :global(p) {
+          flex: 1;
+        }
+      `}</style>
+    </div>
+  )
+}
+
+export const Post = ({ post }) => {
   return (
     <Item post={post}>
       <div className="header">
@@ -181,6 +161,7 @@ const Item = ({ post, children }) => {
   return (
     <div className="item">
       {children}
+      <div className="spacer" />
       <Link {...post} passHref>
         <a className="action">read post</a>
       </Link>
@@ -188,10 +169,12 @@ const Item = ({ post, children }) => {
         .item {
           padding: calc(var(--spacing) * 4);
           background: var(--grey100);
-          display: grid;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
         }
+        .spacer { flex: 1; }
         .action {
-          align-self: end;
           margin-top: calc(var(--spacing) * 2);
           text-transform: uppercase;
           font-weight: 800;
