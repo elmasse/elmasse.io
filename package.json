@@ -26,7 +26,7 @@
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "clamp-js": "^0.7.0",
     "date-fns": "^2.15.0",
-    "elems": "^1.0.0-beta.6",
+    "elems": "^1.0.0-beta.7",
     "next": "^9.4.4",
     "nextein": "^2.7.0-beta.0",
     "nextein-plugin-reading-time": "^1.0.0",
