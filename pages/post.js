@@ -47,6 +47,10 @@ export default withPost(({ post }) => {
           max-width: 48rem;
         }
 
+        article :global(p > img) {
+          margin: calc(var(--spacing) * 6) 0;
+        }
+
         .disclaimer {
           padding: calc(var(--spacing)* 4);
           color: var(--grey500);
