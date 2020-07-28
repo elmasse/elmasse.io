@@ -19,11 +19,13 @@ This is not a post I'd love to share with the world but it helps to write this t
 
 ## Am I asking for "What works for You"?
 
-No.
+No. Niet. Nope.
 
 This is not a debug problem. Otherwise I'd post it in Stack Overflow. I'm not asking for your opinion.
 
 I hate it when people just reply to it as with Dan's tweet: "It's a bad sleep pattern" -- my brain just yelled "F**K YOU!" -- or "Go for a walk, that works for me..." -- "If that works, then get lost!" -- yeah, my brain again.
+
+---
 
 For the record, I sleep a solid 8-9 hour a day. Quit smoking almost a year ago. I exercise weekly. I read a lot (in paper). I try to stay away from screens at least 1 hour before going to bed. I started to eat a bit healthy. All these might help, I'm not gonna deny it. I feel overall way better. But these episodes haven't changed much. They feel pretty similar from what can I recall, like, 15 years ago.
 
