@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import NextApp from 'next/app'
+import Head from 'next/head'
 import { CssBaseline } from 'elems'
 
 import 'prismjs/themes/prism-twilight.css'
@@ -10,6 +11,9 @@ export default class App extends NextApp {
 
     return (
       <Fragment>
+        <Head>
+          <meta name="viewport" content="width=device-width,initial-scale=1" />
+        </Head>
         <CssBaseline />
         <style jsx global>{`
           :root {
