@@ -18,7 +18,7 @@ module.exports = withNextein({
         name: '@geut/nextein-plugin-title-chicago-style',
         options: {
           frontMatter: ['title', 'description'],
-          special: [
+          special: [            
             'elmasse', 
             'npm',
             'CocktailJS',
@@ -26,7 +26,8 @@ module.exports = withNextein({
             'elmasse-bundle',
             'Ext.ux.Cover',
             'Ext.i18n.Bundle',
-            'ES7', 'ES6', 'JWT', 'ExtJS'
+            'ES7', 'ES6', 'JWT', 'ExtJS',
+            'iPad', 'iOS'
           ]
         }
       },
