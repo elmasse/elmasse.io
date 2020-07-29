@@ -15,23 +15,25 @@ export default withPost(({ post }) => {
       <Head>
         <title>{`elmasse | ${title}`}</title>
       </Head>
-        <article>
-          <div className="header">
-            <Container>
-              <Header title={title} subtitle={description} meta={{date, readingTime, tags}}/>
-            </Container>
-          </div>
-          <Container className="content">
-            <Content
-              {...post}              
-              renderers={renderers}
-            />
-            <div className="disclaimer">
-              Any viewpoints and opinions expressed in this article are my own and do not, 
-              in any way, reflect those of my employer, my colleagues, or anyone else. I speak only for myself, not for them.
-            </div>
+      <article>
+        <div className="header">
+          <Container>
+            <Header title={title} subtitle={description} meta={{date, readingTime, tags}}/>
           </Container>
-        </article>
+        </div>
+        <Container className="content">
+          <Content
+            {...post}
+            renderers={renderers}
+          />
+        </Container>
+      </article>
+      <div className="disclaimer">
+        <Container>
+          Any viewpoints and opinions expressed in this article are my own and do not, 
+          in any way, reflect those of my employer, my colleagues, or anyone else. I speak only for myself, not for them.
+        </Container>
+      </div>
       <style jsx>{`
         article :global(.header) {
           /* background by SVGBackgrounds.com */
