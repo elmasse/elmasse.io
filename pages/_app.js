@@ -27,7 +27,9 @@ export default class App extends NextApp {
             --main-color: var(--grey700);
             
             --p-font-size: 21px;
+            --p-margin: calc(var(--spacing) * 6) 0 0 0;
             --h2-margin: calc(var(--spacing) * 8) 0 calc(var(--spacing) * 2) -2px;
+
             font-size: var(--base-font-size);
           }
 
