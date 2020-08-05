@@ -35,23 +35,24 @@ export default function Grid({ featured, side, posts }) {
           grid-row: span 5;
         }
 
+        @media (max-width: 950px) {
+          .cell {
+            grid-column: span 6;
+          }
+
+          .featured, .side {
+            grid-column: span 12;
+          }
+
+        }
+
         @media (max-width: 780px) {
           .grid {
-            grid-gap: 0;
+            grid-gap: var(--spacing);
           }
           
           .cell, .featured, .side {
             grid-column: span 12;
-          }
-
-          .cell:nth-child(3n+1) :global(.item){
-            background-color: var(--palette-color-1);
-          }
-          .cell:nth-child(3n+2) :global(.item){
-            background-color: var(--palette-color-2);
-          }
-          .cell:nth-child(3n+3) :global(.item){
-            background-color: var(--palette-color-3);
           }
         }
       `}</style>
