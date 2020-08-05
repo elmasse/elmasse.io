@@ -26,9 +26,12 @@ export default class App extends NextApp {
             --action-color: #f60;
             --main-color: var(--grey700);
             
+            --h2-margin: calc(var(--spacing) * 8) 0 calc(var(--spacing) * 2) -2px;
+            
             --p-font-size: 21px;
             --p-margin: calc(var(--spacing) * 6) 0 0 0;
-            --h2-margin: calc(var(--spacing) * 8) 0 calc(var(--spacing) * 2) -2px;
+            
+            --code-background-color: var(--grey100);
 
             font-size: var(--base-font-size);
           }
@@ -50,10 +53,6 @@ export default class App extends NextApp {
 
               --light-alpha: rgba(255,255,255, .9);
               --wavy-image: url("/static/images/wavey-fingerprint-light.svg");
-
-              --palette-color-1: #dbdeca;
-              --palette-color-2: #94bcbc;
-              --palette-color-3: #bee4e6;
             }
           }
 
@@ -74,10 +73,7 @@ export default class App extends NextApp {
   
               --light-alpha: rgba(24,24,24, .9);
               --wavy-image: url("/static/images/wavey-fingerprint-dark.svg");
-  
-              --palette-color-1: #494a43;
-              --palette-color-2: #333f40;
-              --palette-color-3: #526465;              
+
             }
           }
 
