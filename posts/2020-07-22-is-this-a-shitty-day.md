@@ -23,11 +23,11 @@ No. Niet. Nope.
 
 This is not a debug problem. Otherwise I'd post it in Stack Overflow. I'm not asking for your opinion.
 
-I hate it when people just reply to it as with Dan's tweet: "It's a bad sleep pattern" -- my brain just yelled "F**K YOU!" -- or "Go for a walk, that works for me..." -- "If that works, then get lost!" -- yeah, my brain again.
+I hate it when people just reply to it as with Dan's tweet: "It's a bad sleep pattern", or "Go for a walk, that works for me...". Somehow, I stumbled across a reference to this article called [Ring Theory](https://www.latimes.com/opinion/op-ed/la-xpm-2013-apr-07-la-oe-0407-silk-ring-theory-20130407-story.html) which I think it's a must read. Comfort in, complain out.
 
 ---
 
-For the record, I sleep a solid 8-9 hour a day. Quit smoking almost a year ago. I exercise weekly. I read a lot (in paper). I try to stay away from screens at least 1 hour before going to bed. I started to eat a bit healthy. All these might help, I'm not gonna deny it. I feel overall way better. But these episodes haven't changed much. They feel pretty similar from what can I recall, like, 15 years ago.
+For the record, I sleep a solid 8-9 hour a day. Quit smoking almost a year ago. I exercise weekly. I read a lot (both physical books and e-books). I try to stay away from screens at least 1 hour before going to bed. I started to eat a bit healthier. All these might help, I'm not gonna deny it. I feel overall way better. But these episodes haven't changed much. They feel pretty similar from what can I recall, like, 15 years ago.
 
 But now I recognize the episodes. Writing is some way to unload them from my head. So this seems to help to visualize the problem. Not just hide them once I got back on track and get myself busy with problems to solve. That definitely doesn't help.
 
