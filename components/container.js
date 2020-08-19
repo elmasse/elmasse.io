@@ -7,10 +7,10 @@ export default function Container({ className = '', children }) {
       <style jsx>{`
         .container {
           margin: 0 auto;
-          padding: 0 1.25rem;
+          padding: 0 calc(var(--spacing) * 3);
           
           width: 100%;
-          max-width: 1024px;
+          max-width: calc(var(--spacing) * 128);
         }
       `}</style>
     </div>
