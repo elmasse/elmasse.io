@@ -96,7 +96,7 @@ export const Side = ({ post }) => {
 const Excerpt = ({ post, clamp = 7 }) => {
   const textEl = useRef(null)
   useEffect(() => {
-    Clamp(textEl.current, { clamp, useNativeClamp: false })
+    Clamp(textEl.current, { clamp, useNativeClamp: true })
   }, [])
   return (
     <div className="excerpt">
