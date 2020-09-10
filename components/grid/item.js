@@ -96,8 +96,8 @@ export const Side = ({ post }) => {
 const Excerpt = ({ post, clamp = 7 }) => {
   const textEl = useRef(null)
   useEffect(() => {
-    Clamp(textEl.current, { clamp, useNativeClamp: true })
-  }, [])
+    if (textEl.current) Clamp(textEl.current, { clamp, useNativeClamp: true })
+  }, [textEl.current])
   return (
     <div className="excerpt">
       <Content ref={textEl} {...post} renderers={{ a: Anchor }} excerpt/>
