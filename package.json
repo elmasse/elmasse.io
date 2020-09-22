@@ -28,7 +28,7 @@
     "date-fns": "^2.15.0",
     "elems": "^1.0.0-beta.11",
     "next": "^9.5.0",
-    "nextein": "^3.0.0-beta.5",
+    "nextein": "^3.0.0-beta.7",
     "nextein-plugin-reading-time": "^1.0.0",
     "prismjs": "^1.21.0",
     "react": "^16.12.0",
