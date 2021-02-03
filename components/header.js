@@ -48,6 +48,7 @@ export default function Header({ title, subtitle, meta: { date, readingTime } = 
         }
 
         p {
+          padding-top: calc(var(--spacing) * 3);
           padding-left: calc(var(--spacing) * (4 + 1));
           font-size: 1.35em;
           color: var(--grey700);

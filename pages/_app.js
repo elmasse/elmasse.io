@@ -29,6 +29,7 @@ export default class App extends NextApp {
             --h2-margin: calc(var(--spacing) * 8) 0 calc(var(--spacing) * 2) -2px;
             
             --p-font-size: 21px;
+            --li-font-size: 21px;
             --p-margin: calc(var(--spacing) * 6) 0 0 0;
             --hr-margin: calc(var(--spacing) * 6) 0 0 0;
             --code-background-color: var(--grey100);
