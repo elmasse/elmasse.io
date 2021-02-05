@@ -14,8 +14,10 @@ export default function Navigation() {
 
   return (
     <nav className={`root ${shrink ? 'shrink': ''}`}>
-      <Container>
+      <Container className="items">
         <h1><Link href="/"><a>elmasse.io</a></Link></h1>
+        <div className="spacer" />
+        <h4><Link href="/about"><a>about me</a></Link></h4>
       </Container>
       <style jsx>{`
         .root {
@@ -25,8 +27,6 @@ export default function Navigation() {
           top: 0;
           height: calc(var(--spacing) * 12);
           transition: all ease-in 150ms;
-          display: flex;
-          align-items: center;
           border-bottom: 1px solid var(--grey100);
         }
 
@@ -39,8 +39,23 @@ export default function Navigation() {
           align-items: center;
         }
 
+        nav :global(.items) {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .spacer {
+          flex: 1;
+        }
+
         h1 {
           font-size: 1.5em;
+        }
+
+        h4 {
+          text-transform: uppercase;
+          font-weight: 400;
         }
 
         a, a:visited {
