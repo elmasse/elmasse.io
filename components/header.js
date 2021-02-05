@@ -10,9 +10,11 @@ export default function Header({ title, subtitle, meta: { date, readingTime } = 
         <div className="column">
           <h1>{title}</h1>
           <p className="subtitle">{subtitle}</p>
+          {date && (
           <p className="meta">
           { formatWithOptions({ locale: enUS }, 'MMM d, yyyy')(new Date(date))} · {readingTime} min read
           </p>
+          )}
 
         </div>
       </div>
