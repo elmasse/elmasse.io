@@ -3,11 +3,10 @@
 import React from 'react'
 import Head from 'next/head'
  
-import { Anchor, Paragraph, HorizontalRule } from 'elems'
+import { Anchor, Paragraph, HorizontalRule, Image } from 'elems'
 
 import Layout from '../components/layout'
 import Container from '../components/container'
-import Header from '../components/header'
 
 export default function About () {
   return (
@@ -18,12 +17,15 @@ export default function About () {
       <article>
         <div className="header">
           <Container>
-            <Header title="Masse Fierro" subtitle="About me" />
+            <div className="column">
+              <h1>About Me</h1>
+            </div>
           </Container>
         </div>
         <Container className="content">
           <Paragraph>
-            Hello, my name is Max Fierro. I have been working in software development for more than 20 years.
+            Hello, my name is <strong>Max Fierro</strong>. I have been working in software development for more than 20 years.
+            <Image src="/static/images/about.jpg" />
           </Paragraph>
           <Paragraph>
             I blog about mostly software development and not that often as I would like. 
@@ -35,15 +37,8 @@ export default function About () {
             If you want to keep in touch or just contact me, find me on twitter by <Anchor>@elmasse</Anchor>
             &nbsp;or drop me a line at <i>elmasse at gmail dot com</i>.
           </Paragraph>
-
         </Container>
       </article>
-      <div className="disclaimer">
-        <Container>
-          Any viewpoints and opinions expressed in this article are my own and do not, 
-          in any way, reflect those of my employer, my colleagues, or anyone else. I speak only for myself, not for them.
-        </Container>
-      </div>
       <style jsx>{`
         article :global(.header) {
           /* background by SVGBackgrounds.com */
@@ -63,11 +58,38 @@ export default function About () {
           margin: calc(var(--spacing) * 6) 0;
         }
 
-        .disclaimer {
-          padding: calc(var(--spacing)* 4);
-          color: var(--grey500);
-          background-color: var(--grey50);
+        .header {
+          min-height: 75vh;
+          display: flex;
+          align-items: center;
+          justify-items: center; 
         }
+
+        .column {
+          flex: 1;        
+          display: flex;
+          flex-direction: column;
+        }
+
+        .header h1 {
+          margin-bottom: calc(var(--spacing) * 2);
+          border-left: var(--spacing) solid var(--action-color);
+          padding-left: calc(var(--spacing) * 4);
+          font-family: var(--font-family-heading);
+          font-weight: 700;
+          font-size: 6.5em;
+          line-height: .93;
+          letter-spacing: -2px;
+          hyphens: word;
+        }
+
+        .subtitle {
+          padding-top: calc(var(--spacing) * 3);
+          padding-left: calc(var(--spacing) * (4 + 1));
+          font-size: 1.35em;
+          color: var(--grey700);
+          letter-spacing: -0.5px;
+        }        
       `}</style>      
     </Layout>
   )
