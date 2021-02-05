@@ -6,29 +6,19 @@ import { enUS } from 'date-fns/locale'
 export default function Header({ title, subtitle, meta: { date, readingTime } = {} }) {
   return (
     <div className="root">
-      <div className="center">
-        <div className="column">
-          <h1>{title}</h1>
-          <p className="subtitle">{subtitle}</p>
-          {date && (
-          <p className="meta">
-          { formatWithOptions({ locale: enUS }, 'MMM d, yyyy')(new Date(date))} · {readingTime} min read
-          </p>
-          )}
-
-        </div>
+      <div className="column">
+        <h1>{title}</h1>
+        <p className="subtitle">{subtitle}</p>
+        <p className="meta">
+        { formatWithOptions({ locale: enUS }, 'MMM d, yyyy')(new Date(date))} · {readingTime} min read
+        </p>
       </div>
-
       <style jsx>{`
         .root {
           min-height: 75vh;
           display: flex;
           align-items: center;
           justify-items: center; 
-        }
-
-        .center {
-          display: flex;
         }
 
         .column {
