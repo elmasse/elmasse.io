@@ -27,7 +27,7 @@
     "clamp-js": "^0.7.0",
     "date-fns": "^2.16.1",
     "elems": "^1.0.0-beta.15",
-    "next": "10.0.5",
+    "next": "^10.0.7",
     "nextein": "^3.0.0",
     "nextein-plugin-reading-time": "^1.0.0",
     "prismjs": "^1.23.0",
@@ -38,6 +38,7 @@
     "unist-util-remove-position": "^3.0.0"
   },
   "devDependencies": {
-    "cpr": "^3.0.1"
+    "cpr": "^3.0.1",
+    "webpack": "^5.24.1"
   }
 }
