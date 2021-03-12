@@ -26,7 +26,8 @@ module.exports = withNextein({
             'Ext.ux.Cover',
             'Ext.i18n.Bundle',
             'ES7', 'ES6', 'JWT', 'ExtJS',
-            'iPad', 'iOS'
+            'iPad', 'iOS',
+            'tailwindcss'
           ]
         }
       }
