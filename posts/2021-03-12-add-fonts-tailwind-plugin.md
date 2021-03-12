@@ -35,7 +35,7 @@ But this is not good. There should be another way.
 
 Good news, there is another way. Yeah, I spoiled that already.
 
-I did a few more research (in fact it took me a whole morning to figure it out) and you can use the `@import` directive making it easier to maintain, update, etc:
+I did a few more research (in fact it took me a whole morning to figure it out). You can use the `@import` directive making it easier to maintain, update, etc:
 
 ```js
 
