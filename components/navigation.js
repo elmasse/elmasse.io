@@ -1,40 +1,25 @@
-import React, { useState } from 'react'
-import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import Link from 'nextein/link'
 
 import Container from './container'
 
 export default function Navigation() {
-  const [shrink, setShrink] = useState(false)
   
-  useScrollPosition(({ currPos }) => {
-    const isShrink = currPos.y < -10;
-    if (shrink !== isShrink) setShrink(isShrink);
-  }, [shrink])
-
   return (
-    <nav className={`root ${shrink ? 'shrink': ''}`}>
+    <nav>
       <Container className="items">
         <h1><Link href="/"><a>elmasse.io</a></Link></h1>
         <div className="spacer" />
         <h4><Link href="/about"><a>about me</a></Link></h4>
       </Container>
       <style jsx>{`
-        .root {
+        nav {
           position: sticky;
           background: var(--light-alpha);
           z-index: 10;
-          top: 0;
+          top:  calc(var(--spacing) * -4);
           height: calc(var(--spacing) * 12);
           transition: all ease-in 150ms;
           border-bottom: 1px solid var(--grey100);
-        }
-
-        .root.shrink {
-          height: calc(var(--spacing) * 8);
-        }
-
-        nav {
           display: flex;
           align-items: center;
         }
@@ -43,6 +28,9 @@ export default function Navigation() {
           display: flex;
           flex-direction: row;
           align-items: center;
+          height: calc(var(--spacing) * 8);
+          position: sticky;
+          top: 0;     
         }
 
         .spacer {
