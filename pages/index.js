@@ -34,12 +34,15 @@ export default withPosts(({ posts }) => {
           background-attachment: fixed;
         }
         .grid {
-          margin-top: 4rem;
-          margin-bottom: 8rem;
+          margin-top: calc(var(--spacing) * 8);
+          margin-bottom: calc(var(--spacing) * 16);
         }
 
         @media (max-width: 780px) {
-          .grid { margin: 0; }
+          .grid {
+            margin: 0;
+            margin-bottom: calc(var(--spacing) * 4);
+          }
           .grid :global(.container) {
             padding 0;
           }

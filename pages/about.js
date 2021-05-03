@@ -89,7 +89,14 @@ export default function About () {
           font-size: 1.35em;
           color: var(--grey700);
           letter-spacing: -0.5px;
-        }        
+        }
+
+        @media (max-width: 780px) {
+          .header h1 {
+            font-size: 5em;
+          }
+        }
+        
       `}</style>      
     </Layout>
   )

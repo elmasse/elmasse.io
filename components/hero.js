@@ -75,7 +75,6 @@ export default function Hero({ post }) {
           color: var(--gre900);
         }
 
-
         .header p {
           padding-top: calc(var(--spacing) * 3);
           padding-left: calc(var(--spacing) * (4 + 1));
@@ -105,6 +104,16 @@ export default function Hero({ post }) {
           text-decoration: none;
           color: var(--action-color);
         }
+
+        @media (max-width: 780px) {
+          .header h1 {
+            hyphens: auto;
+            font-size: 4em;
+          }
+          .header p {
+            hyphens: auto;
+          }
+        }          
       `}</style>
     </div>
   )

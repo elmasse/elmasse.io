@@ -36,7 +36,7 @@ export default function Header({ title, subtitle, meta: { date, readingTime } = 
           font-size: 6.5em;
           line-height: .93;
           letter-spacing: -2px;
-          hyphens: word;
+          hyphens: auto;
         }
 
         p {
@@ -56,10 +56,10 @@ export default function Header({ title, subtitle, meta: { date, readingTime } = 
         @media (max-width: 780px) {
           h1 {
             hyphens: auto;
-            font-size: 5em;
+            font-size: 4em;
           }
           .subtitle {
-            hypens: word;
+            hyphens: auto;
           }
         }        
 
