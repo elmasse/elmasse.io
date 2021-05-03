@@ -24,9 +24,9 @@
     "@geut/nextein-plugin-title-chicago-style": "^1.1.1",
     "@mapbox/rehype-prism": "^0.5.0",
     "clamp-js": "^0.7.0",
-    "date-fns": "^2.20.0",
+    "date-fns": "^2.21.1",
     "elems": "^1.0.0-beta.15",
-    "next": "^10.1.3",
+    "next": "^10.2.0",
     "nextein": "^3.0.0",
     "nextein-plugin-reading-time": "^1.0.0",
     "prismjs": "^1.23.0",
@@ -38,6 +38,6 @@
   },
   "devDependencies": {
     "cpr": "^3.0.1",
-    "webpack": "^5.31.0"
+    "webpack": "^5.36.2"
   }
 }
