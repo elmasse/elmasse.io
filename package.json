@@ -7,7 +7,7 @@
     "dev": "nextein",
     "export": "nextein build && nextein export",
     "copy-wellknown": "cpr .well-known out/.well-known",
-    "now-build": "npm run export && npm run copy-wellknown"
+    "build": "npm run export && npm run copy-wellknown"
   },
   "repository": {
     "type": "git",
