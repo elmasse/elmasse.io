@@ -24,15 +24,15 @@ First thing first, install Play.js in your iPad. Yes. It’s USD 4.99 - (almost 
 Now, let's create a new project. Give it a name. For the type we can select a plain Node.js project or a Node.js + Next.js template. Let’s use the latter so we create less files. 
 And finally where to save it. I’d try to get everything in my iPad.
 
-![Step 1](/static/post-assets/play-001.png)
+![Step 1](/post-assets/play-001.png)
 
 If you click on the little Play button on the bottom of the screen you will be presented with a modal asking to resolve modules. Don't worry that's the `npm install` (sort of) stage. So go ahead, and tap on resolve
 
-![Step 2](/static/post-assets/play-002.png)
+![Step 2](/post-assets/play-002.png)
 
 If all goes smoothly, you can tap on the Globe icon in the bottom toolbar and it will open a browser window by the side. You are now able to run play with your first Next.js site in your iPad Pro. Magical, isn't it?
 
-![Step 3](/static/post-assets/play-003.png)
+![Step 3](/post-assets/play-003.png)
 
 ## Starting with Nextein
 
@@ -104,7 +104,7 @@ Hello, World! This is my first post from my iPad!
 
 And after you click back on the play button, resolve dependencies again, and open the side browser, your first Nextein Site is up and running. 
 
-![Step 4](/static/post-assets/play-004.png)
+![Step 4](/post-assets/play-004.png)
 
 Now enjoy modifying your Home page, or adding more posts!
 

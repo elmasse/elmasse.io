@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "nextein",
     "export": "nextein build && nextein export",
-    "copy-wellknown": "cpr .well-known out/.well-known",
-    "build": "npm run export && npm run copy-wellknown"
+    "build": "npm run export"
   },
   "repository": {
     "type": "git",
@@ -37,7 +36,6 @@
     "unist-util-remove-position": "^3.0.0"
   },
   "devDependencies": {
-    "cpr": "^3.0.1",
     "webpack": "^5.36.2"
   }
 }

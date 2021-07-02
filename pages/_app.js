@@ -54,7 +54,7 @@ export default class App extends NextApp {
               --dark: #000;
 
               --light-alpha: rgba(255,255,255, .9);
-              --wavy-image: url("/static/images/wavey-fingerprint-light.svg");
+              --wavy-image: url("/images/wavey-fingerprint-light.svg");
             }
           }
 
@@ -74,7 +74,7 @@ export default class App extends NextApp {
               --dark: #fff;
   
               --light-alpha: rgba(24,24,24, .9);
-              --wavy-image: url("/static/images/wavey-fingerprint-dark.svg");
+              --wavy-image: url("/images/wavey-fingerprint-dark.svg");
 
             }
           }

@@ -25,7 +25,7 @@ export default function About () {
         <Container className="content">
           <Paragraph>
             Hello, my name is <strong>Max Fierro</strong>. I have been working in software development for more than 20 years.
-            <Image src="/static/images/about.jpg" />
+            <Image src="/images/about.jpg" />
           </Paragraph>
           <Paragraph>
             I blog about mostly software development and not that often as I would like. 
