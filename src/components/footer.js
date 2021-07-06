@@ -3,7 +3,7 @@ import { CC, BY } from './icons/creative-commons'
 
 export default function Footer () {
   return (
-    <footer className='border-t border-gray-100 border-solid pt-6'>
+    <footer className='bg-white dark:bg-black border-t border-gray-100 dark:border-gray-700 border-solid pt-6 text-gray-900 dark:text-gray-100'>
       <div className='max-w-7xl h-full pt-4 mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex flex-col space-y-8 sm:flex-row sm:space-y-0 sm:space-x-32'>
           <div className='flex-none pb-4'>
@@ -45,16 +45,14 @@ export default function Footer () {
                 </ul>
               </li>
 
-
-
             </ul>
           </div>
         </div>
       </div>
-      <div className='border-t border-gray-100'>
+      <div className='bg-gray-50 dark:bg-gray-800 border-t border-gray-100 dark:border-gray-900'>
         <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
           <div className='space-x-1 h-10 w-full flex items-center justify-center'>
-            <div className='text-xs text-gray-500 font-medium'>
+            <div className='text-xs text-gray-600  dark:text-gray-300 font-medium'>
               Built with ♥︎ and <a href='https://nextein.elmasse.io'>nextein</a> by <a href='https://github.com/elmasse'>
               /<span className='font-semibold'>elmasse</span></a>  
             </div>

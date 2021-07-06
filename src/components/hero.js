@@ -9,21 +9,21 @@ export default function Hero({ post }) {
     
     <div className='py-40 flex'>
       <div className='flex-1 px-4 space-y-5'>
-        <h1 className='text-5xl md:text-7xl font-serif tracking-tight font-extrabold text-gray-900 border-yellow-500 border-l-8 pl-8'>
+        <h1 className='text-5xl md:text-7xl font-serif tracking-tight font-extrabold text-gray-900 dark:text-gray-100 border-action border-l-8 pl-8'>
           <Link {...post}><a>{title}</a></Link>
         </h1>
         <div className='pl-8 space-y-4'>
           <p className='text-2xl'>{description}</p>
-          <p className='text-sm text-gray-500'>
+          <p className='text-sm text-gray-500 dark:text-gray-300 '>
           { formatWithOptions({ locale: enUS }, 'MMM d, yyyy')(new Date(date))} · {readingTime} min read
           </p>
         </div>
       </div>
 
       <div className='flex-1 px-4 flex flex-col justify-center space-y-4'>
-        <Content className='text-xl text-gray-500' {...post} excerpt />
+        <Content className='text-xl text-gray-500 dark:text-gray-300 ' {...post} excerpt />
         <Link {...post}>
-          <a className='text-lg uppercase text-yellow-500 font-extrabold tracking-tight'>read post</a>
+          <a className='text-lg uppercase text-action Dfont-extrabold tracking-tight'>read post</a>
         </Link>
       </div>
     

@@ -13,12 +13,12 @@ export default withPosts(({ posts }) => {
   const [heroPost, featured, side, ...morePosts] = posts
 
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen bg-white dark:bg-black'>
       <Head>
         <title>elmasse | Home</title>
       </Head>
       <Navigation />
-      <div className='bg-hero-pattern-light bg-fixed'>
+      <div className='bg-hero-pattern-light dark:bg-hero-pattern-dark bg-fixed'>
         <div className='max-w-7xl mx-auto px-6'>
           {heroPost && <Hero post={heroPost}/>}
         </div>
