@@ -20,7 +20,7 @@ export default withPost(({ post }) => {
             <Header title={title} subtitle={description} meta={{date, readingTime, tags}}/>
           </div>
         </div>
-        <Content className='max-w-5xl mx-auto py-20 prose dark:prose-dark prose-xl ' {...post} />
+        <Content className='max-w-5xl mx-auto px-6 lg:px-0 py-20 prose dark:prose-dark prose-lg lg:prose-xl' {...post} />
       </article>
       <div className='max-w-7xl mx-auto px-6 py-20'>
         <p className='text-sm'>
