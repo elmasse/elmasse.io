@@ -2,46 +2,45 @@
 
 import React from 'react'
 import Head from 'next/head'
+import Navigation from '../components/navigation'
+import Footer from '../components/footer'
  
-import { Anchor, Paragraph, HorizontalRule, Image } from 'elems'
-
-import Layout from '../components/layout'
-import Container from '../components/container'
 
 export default function About () {
   return (
-    <Layout>
+    <div>
       <Head>
         <title>{`elmasse | About`}</title>
       </Head>
+      <Navigation />
       <article>
-        <div className="header">
-          <Container>
-            <div className="column">
-              <h1>About Me</h1>
-            </div>
-          </Container>
+        <div className='bg-hero-pattern-light bg-fixed'>
+          <div className='max-w-7xl mx-auto py-48'>
+            <h1 className='text-8xl font-serif tracking-tight font-extrabold text-gray-900 border-yellow-500 border-l-8 pl-8'>
+              About Me
+            </h1>
+          </div>
         </div>
-        <Container className="content">
-          <Paragraph>
+        <div className="max-w-5xl mx-auto py-20 px-6 prose prose-xl">
+          <p>
             Hello, my name is <strong>Max Fierro</strong>. I have been working in software development for more than 20 years.
-            <Image src="/images/about.jpg" />
-          </Paragraph>
-          <Paragraph>
+            <img className='p-8' src="/images/about.jpg" />
+          </p>
+          <p>
             I blog about mostly software development and not that often as I would like. 
             But I try to share here part of my experience and most of the time it serves as a note for future self.
             &nbsp;Hopefully that would serve someone else too.
-          </Paragraph>
-          <HorizontalRule />
-          <Paragraph>
-            If you want to keep in touch or just contact me, find me on twitter by <Anchor>@elmasse</Anchor>
+          </p>
+          <hr />
+          <p>
+            If you want to keep in touch or just contact me, find me on twitter by <a>@elmasse</a>
             &nbsp;or drop me a line at <i>elmasse at gmail dot com</i>.
-          </Paragraph>
-        </Container>
+          </p>
+        </div>
       </article>
-      <style jsx>{`
+      <Footer />
+      {/* <style jsx>{`
         article :global(.header) {
-          /* background by SVGBackgrounds.com */
           background-image: var(--wavy-image);
           background-attachment: fixed;
         }
@@ -97,7 +96,7 @@ export default function About () {
           }
         }
         
-      `}</style>      
-    </Layout>
+      `}</style>       */}
+    </div>
   )
 }

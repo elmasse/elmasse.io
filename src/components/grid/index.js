@@ -1,16 +1,28 @@
-import React from 'react'
 import { Featured, Side, Post } from './item'
 
 export default function Grid({ featured, side, posts }) {
   return (
-    <div className="grid">
-      {featured && <div className="cell featured"><Featured post={featured} /></div>}
-      {side && <div className="cell side"><Side post={side} /></div>}
+    <div className='grid grid-cols-12 gap-4 auto-rows-100px'>
+
+      {featured &&
+        <div className='col-span-8 row-span-5 grid justify-items-stretch'>
+          <Featured post={featured} />
+        </div>
+      }
+
+      {side &&
+        <div className='col-span-4 row-span-5 grid justify-items-stretch'>
+          <Side post={side} />
+        </div>
+      }
+
       {posts.map(post => (
-        <div key={post.data.url} className="cell"><Post post={post} /></div>
+        <div key={post.data.url} className='col-span-4 row-span-4 grid justify-items-stretch'>
+          <Post post={post} />
+        </div>
       ))}
 
-      <style jsx>{`
+      {/* <style jsx>{`
         .grid{
           display: grid;
           grid-template-columns: repeat(12, 1fr);
@@ -55,7 +67,7 @@ export default function Grid({ featured, side, posts }) {
             grid-column: span 12;
           }
         }
-      `}</style>
+      `}</style> */}
     </div>
   )
 }

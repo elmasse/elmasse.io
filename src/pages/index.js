@@ -1,11 +1,11 @@
-import React from 'react'
 import Head from 'next/head'
 
 import withPosts, { sortByDate } from 'nextein/posts'
 
-import Layout from '../components/layout'
-import Container from '../components/container'
+// import Layout from '../components/layout'
+import Navigation from '../components/navigation'
 import Hero from '../components/hero'
+import Footer from '../components/footer'
 import Grid from '../components/grid'
 
 export default withPosts(({ posts }) => {
@@ -13,26 +13,21 @@ export default withPosts(({ posts }) => {
   const [heroPost, featured, side, ...morePosts] = posts
 
   return (
-    <Layout>
+    <div className='min-h-screen'>
       <Head>
         <title>elmasse | Home</title>
       </Head>
-      <div className="hero">
-        <Container>
+      <Navigation />
+      <div className='bg-hero-pattern-light bg-fixed'>
+        <div className='max-w-7xl mx-auto px-6'>
           {heroPost && <Hero post={heroPost}/>}
-        </Container>
+        </div>
       </div>
-      <div className="grid">
-        <Container>
-          <Grid featured={featured} side={side} posts={morePosts} />
-        </Container>
+      <div className='max-w-7xl mx-auto mt-16 mb-32'>
+        <Grid featured={featured} side={side} posts={morePosts} />
       </div>
-      <style jsx>{`
-        .hero {
-          /* background by SVGBackgrounds.com */
-          background-image: var(--wavy-image);
-          background-attachment: fixed;
-        }
+      <Footer />
+      {/* <style jsx>{`
         .grid {
           margin-top: calc(var(--spacing) * 8);
           margin-bottom: calc(var(--spacing) * 16);
@@ -42,12 +37,12 @@ export default withPosts(({ posts }) => {
           .grid {
             margin: 0;
             margin-bottom: calc(var(--spacing) * 4);
-          }
+          }s
           .grid :global(.container) {
             padding 0;
           }
         }
-      `}</style>
-    </Layout>
+      `}</style> */}
+    </div>
   )
 })
