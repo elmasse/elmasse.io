@@ -1,5 +1,4 @@
 import Head from 'next/head'
-
 import withPosts, { sortByDate } from 'nextein/posts'
 
 // import Layout from '../components/layout'

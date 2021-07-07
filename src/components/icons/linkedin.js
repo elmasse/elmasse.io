@@ -1,4 +1,3 @@
-import React from 'react'
 
 export default (props) => (
   <svg {...props} viewBox="0 0 67 67" version="1.1" xmlns="http://www.w3.org/2000/svg">

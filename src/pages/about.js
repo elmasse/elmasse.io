@@ -1,6 +1,3 @@
-
-
-import React from 'react'
 import Head from 'next/head'
 import Navigation from '../components/navigation'
 import Footer from '../components/footer'

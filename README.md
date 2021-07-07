@@ -4,6 +4,7 @@
 
 ## Stack
 
+- TailwindCSS
 - Nextein
 - Next.js
 - React

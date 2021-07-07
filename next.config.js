@@ -1,4 +1,4 @@
-const { withNextein} = require('nextein/config')
+const { withNextein } = require('nextein/config')
 
 module.exports = withNextein({
   webpack5: true,
