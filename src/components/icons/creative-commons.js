@@ -1,7 +1,5 @@
 
 
-import React from 'react'
-
 export function CC (props) {
   return (
     <svg fill="currentColor" {...props} viewBox="5.5 -3.5 64 64">

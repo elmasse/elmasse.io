@@ -1,4 +1,4 @@
-const { withNextein} = require('nextein/config')
+const { withNextein } = require('nextein/config')
 
 module.exports = withNextein({
   webpack5: true,
@@ -25,7 +25,7 @@ module.exports = withNextein({
             'Ext.i18n.Bundle',
             'ES7', 'ES6', 'JWT', 'ExtJS',
             'iPad', 'iOS',
-            'tailwindcss'
+            'tailwindcss'            
           ]
         }
       }

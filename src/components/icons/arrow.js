@@ -1,6 +1,4 @@
 
-import React from 'react'
-
 export default function Arrow (props) {
   return (
     <svg {...props} viewBox="0 0 1024 1024">

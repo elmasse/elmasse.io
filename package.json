@@ -21,21 +21,21 @@
   "homepage": "https://github.com/elmasse/elmasse.github.io#readme",
   "dependencies": {
     "@geut/nextein-plugin-title-chicago-style": "^1.1.1",
-    "@mapbox/rehype-prism": "^0.5.0",
-    "clamp-js": "^0.7.0",
+    "@mapbox/rehype-prism": "^0.7.0",
+    "@tailwindcss/line-clamp": "^0.2.1",
+    "@tailwindcss/typography": "^0.4.0",
+    "autoprefixer": "^10.2.4",
     "date-fns": "^2.21.1",
-    "elems": "^1.0.0-beta.15",
     "next": "^11.0.0",
     "nextein": "^3.1.1",
     "nextein-plugin-reading-time": "^1.0.0",
+    "postcss": "^8.2.6",
     "prismjs": "^1.24.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rehype-autolink-headings": "^5.0.1",
     "rehype-slug": "^4.0.1",
-    "unist-util-remove-position": "^3.0.0"
-  },
-  "devDependencies": {
+    "tailwindcss": "^2.1.0",
     "webpack": "^5.36.2"
   }
 }
