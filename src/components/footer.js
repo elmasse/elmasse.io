@@ -16,15 +16,23 @@ export default function Footer () {
               <li className='space-y-5 row-span-2'>
                 <div className='text-xs font-semibold tracking-wide uppercase'>Social</div>
                 <ul className='space-y-4'>
-                  <li>Github</li>
-                  <li>Twitter</li>
+                  <li><a rel='noopener' href='https://github.com/elmasse' target='_blank'>Github</a></li>
+                  <li><a rel='noopener' href='https://twitter.com/elmasse' target='_blank'>Twitter</a></li>
+                  <li><a rel='noopener' href='https://www.linkedin.com/in/maximilianofierro' target='_blank'>LinkedIn</a></li>
                 </ul>
               </li>
 
-              <li className='space-y-5 row-span-2 col-span-2'>
+              <li className='space-y-5 row-span-2'>
                 <div className='text-xs font-semibold tracking-wide uppercase'>Contact</div>
                 <ul className='space-y-4'>
-                  <li>Mail</li>
+                  <li><a rel='noopener' href='mailto:elmasse@gmail.com'>Mail</a></li>
+                </ul>
+              </li>
+
+              <li className='space-y-5 row-span-2'>
+                <div className='text-xs font-semibold tracking-wide uppercase'>Projects</div>
+                <ul className='space-y-4'>
+                  <li><a rel='noopener' href='https://nextein.elmasse.io' target='_blank'>Nextein</a></li>
                 </ul>
               </li>
 
