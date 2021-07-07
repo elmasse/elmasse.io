@@ -1,5 +1,5 @@
 ---
-title: Add @import from Google Fonts in a tailwindcss plugin
+title: Add Google Fonts in a tailwindcss plugin
 description: Or from any other Fonts CDN.
 tags: [tailwindcss, plugin]
 category: pills
