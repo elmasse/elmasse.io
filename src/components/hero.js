@@ -8,8 +8,8 @@ export default function Hero({ post }) {
   return (
     
     <div className='py-20 md:py-40 flex flex-col md:flex-row'>
-      <div className='flex-none md:flex-1 px-4 space-y-5'>
-        <h1 className='text-6xl md:text-7xl font-serif tracking-tight font-extrabold text-gray-900 dark:text-gray-100 border-action border-l-8 pl-8'>
+      <div className='flex-none md:flex-1 px-2 space-y-5'>
+        <h1 className='text-5xl md:text-6xl lg:text-7xl font-serif tracking-tight font-extrabold text-gray-900 dark:text-gray-100 border-action border-l-8 pl-8'>
           <Link {...post}><a>{title}</a></Link>
         </h1>
         <div className='pl-8 space-y-4'>
