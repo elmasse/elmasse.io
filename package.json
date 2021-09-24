@@ -24,18 +24,18 @@
     "@mapbox/rehype-prism": "^0.7.0",
     "@tailwindcss/line-clamp": "^0.2.1",
     "@tailwindcss/typography": "^0.4.0",
-    "autoprefixer": "^10.2.4",
-    "date-fns": "^2.21.1",
+    "autoprefixer": "^10.3.5",
+    "date-fns": "^2.24.0",
     "next": "^11.1.1",
-    "nextein": "^3.2.0",
+    "nextein": "^3.2.1",
     "nextein-plugin-reading-time": "^1.0.0",
-    "postcss": "^8.2.6",
+    "postcss": "^8.3.7",
     "prismjs": "^1.25.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rehype-autolink-headings": "^5.0.1",
     "rehype-slug": "^4.0.1",
-    "tailwindcss": "^2.1.0",
-    "webpack": "^5.36.2"
+    "tailwindcss": "^2.2.15",
+    "webpack": "^5.53.0"
   }
 }
