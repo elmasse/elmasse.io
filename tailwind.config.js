@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     fontFamily: {
       'serif': ['"PT Serif"'],
-      'sans': ['Lato']
+      'sans': ['Lato'],
+      'em': ['Pacifico']
     },
     extend: {
       backgroundImage: theme => ({

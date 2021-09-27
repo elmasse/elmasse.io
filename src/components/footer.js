@@ -25,7 +25,7 @@ export default function Footer () {
               <li className='space-y-5 row-span-2'>
                 <div className='text-xs font-semibold tracking-wide uppercase'>Contact</div>
                 <ul className='space-y-4'>
-                  <li><a rel='noopener' href='mailto:elmasse@gmail.com'>Mail</a></li>
+                  <li><a rel='noopener' href='mailto:hello@elmasse.io'>Mail</a></li>
                 </ul>
               </li>
 
@@ -62,7 +62,7 @@ export default function Footer () {
           <div className='space-x-1 h-10 w-full flex items-center justify-center'>
             <div className='text-xs text-gray-600  dark:text-gray-300 font-medium'>
               Built with ♥︎ and <a href='https://nextein.elmasse.io'>nextein</a> by <a href='https://github.com/elmasse'>
-              /<span className='font-semibold'>elmasse</span></a>  
+              <span className='font-em text-sm'>elmasse</span></a>  
             </div>
           </div>
         </div>
