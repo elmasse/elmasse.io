@@ -21,7 +21,7 @@ export default function About () {
         <div className='max-w-5xl mx-auto px-6 lg:px-0 py-20 prose dark:prose-dark prose-lg lg:prose-xl'>
           <p>
             Hello, my name is <strong>Max Fierro</strong>. I have been working in software development for more than 20 years.
-            <img className='p-8 mx-auto max-w-lg' src='/images/about.jpg' />
+            <img className='p-8 mx-auto md:max-w-lg' src='/images/about.jpg' />
           </p>
           <p>
             I blog about mostly software development and not that often as I would like. 
