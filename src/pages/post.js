@@ -7,11 +7,12 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 
 export default withPost(({ post }) => {
-  const { title, description, category, tags, date, url, readingTime } = post.data
+  const { title, description, tags, date, url, readingTime } = post.data
   return (
     <div className='min-h-screen bg-white dark:bg-black'>
       <Head>
         <title>{`elmasse | ${title}`}</title>
+        <link rel="canonical" href={`https://elmasse.io${url}`} />
       </Head>
       <Navigation />
       <article>
