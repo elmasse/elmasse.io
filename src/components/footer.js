@@ -32,7 +32,7 @@ export default function Footer () {
               <li className='space-y-5 row-span-2'>
                 <div className='text-xs font-semibold tracking-wide uppercase'>Projects</div>
                 <ul className='space-y-4'>
-                  <li><a rel='noopener' href='https://nextein.elmasse.io' target='_blank'>Nextein</a></li>
+                  <li><a rel='noopener' href='https://nextein.elmasse.io' target='_blank'>nextein</a></li>
                 </ul>
               </li>
 
@@ -66,7 +66,7 @@ export default function Footer () {
             </div>
           </div>
         </div>
-      </div>      
+      </div>
     </footer>
   )
 }
