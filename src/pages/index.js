@@ -30,16 +30,22 @@ export default withPosts(({ posts }) => {
       </div>
 
       <div className='max-w-7xl mx-auto mt-16 mb-16 space-y-8'>
-        <h2 className='text-4xl md:text-5xl lg:text-6xl font-serif tracking-tight font-extrabold text-gray-900 dark:text-gray-100 pl-4'>
-        Pills &amp; Notes
-        </h2>
+        <div className='space-y-4 pl-4'>
+          <h2 className='text-3xl md:text-4xl lg:text-5xl font-serif tracking-tight font-extrabold text-gray-900 dark:text-gray-100'>
+            Pills &amp; Notes
+          </h2>
+          <div className='w-20 h-1 bg-action'></div>
+        </div>
         <Grid posts={pills} />
       </div>
 
-      <div className='max-w-7xl mx-auto mt-16 mb-32 space-y-8'>
-        <h2 className='text-4xl md:text-5xl lg:text-6xl font-serif tracking-tight font-extrabold text-gray-900 dark:text-gray-100 pl-4'>
-        More Posts
-        </h2>
+      <div className='max-w-7xl mx-auto mt-24 mb-32 space-y-8'>
+      <div className='space-y-4 pl-4'>
+          <h2 className='text-3xl md:text-4xl lg:text-5xl font-serif tracking-tight font-extrabold text-gray-900 dark:text-gray-100'>
+            More Posts
+          </h2>
+          <div className='w-20 h-1 bg-action'></div>
+        </div>
 
         <Grid featured={featured} side={side} posts={morePosts} />
       </div>
