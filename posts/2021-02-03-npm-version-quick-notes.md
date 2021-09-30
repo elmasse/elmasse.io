@@ -1,5 +1,5 @@
 ---
-title: Working with npm & semver.
+title: Working with npm & semver
 description: A quick set of notes on versions, semver, channels, and npm.
 tags: [npm, js, semver]
 category: guides
