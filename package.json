@@ -4,9 +4,10 @@
   "description": "elmasse.io",
   "main": "index.js",
   "scripts": {
-    "dev": "nextein",
-    "export": "nextein build && nextein export",
-    "build": "npm run export"
+    "dev": "next",
+    "export": "next build && next export",
+    "build": "npm run export",
+    "analyze": "ANALYZE=true next build"
   },
   "repository": {
     "type": "git",
@@ -22,12 +23,13 @@
   "dependencies": {
     "@geut/nextein-plugin-title-chicago-style": "^1.1.1",
     "@mapbox/rehype-prism": "^0.7.0",
+    "@next/bundle-analyzer": "^11.1.2",
     "@tailwindcss/line-clamp": "^0.2.1",
     "@tailwindcss/typography": "^0.4.0",
     "autoprefixer": "^10.3.5",
     "date-fns": "^2.24.0",
     "next": "^11.1.1",
-    "nextein": "^3.2.3",
+    "nextein": "^4.0.0-beta.4",
     "nextein-plugin-reading-time": "^1.0.0",
     "postcss": "^8.3.7",
     "prismjs": "^1.25.0",

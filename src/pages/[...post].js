@@ -1,12 +1,33 @@
 
 import Head from 'next/head'
-import withPost, { Content } from 'nextein/post'
+import Content from 'nextein/content'
 
 import Navigation from '../components/navigation'
 import Header from '../components/header'
 import Footer from '../components/footer'
 
-export default withPost(({ post }) => {
+export async function getStaticPaths () {
+  const { getData } = await import('nextein/fetcher')
+  const data = await getData()
+  return {
+    paths: data.map(({ category, slug }) => ({
+      params: { post: [...category.split('/'), slug] }
+    })),
+    fallback: false
+  }
+}
+
+export async function getStaticProps ({ params }) {
+  const { getPost } = await import('nextein/fetcher')
+  const [slug, ...categories] = params.post.reverse()
+  return {
+    props: {
+      post: await getPost({ category: categories.join('/'), slug })
+    }
+  }
+}
+
+export default function Post({ post }) {
   const { title, description, tags, date, url, readingTime } = post.data
   return (
     <div className='min-h-screen bg-white dark:bg-black'>
@@ -32,4 +53,4 @@ export default withPost(({ post }) => {
       <Footer />
     </div>
   )
-});
+}

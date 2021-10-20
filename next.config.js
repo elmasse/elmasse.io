@@ -1,6 +1,9 @@
 const { withNextein } = require('nextein/config')
-
-module.exports = withNextein({
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true'
+})
+module.exports = withNextein(
+  withBundleAnalyzer({
   webpack5: true,
   nextein: {
     plugins: [
@@ -31,4 +34,4 @@ module.exports = withNextein({
       }
     ]
   }
-})
+}))

@@ -1,13 +1,27 @@
+import { inCategory } from 'nextein/filters'
 import Head from 'next/head'
-import withPosts, { sortByDate } from 'nextein/posts'
 
-// import Layout from '../components/layout'
 import Navigation from '../components/navigation'
 import Hero from '../components/hero'
 import Footer from '../components/footer'
 import Grid from '../components/grid'
 
-export default withPosts(({ posts }) => {
+export async function getStaticProps () {
+  const { getPosts } = await import('nextein/fetcher')
+  return {
+    props: {
+      posts: await getPosts()
+    }
+  }
+}
+
+function sortByDate (a, b) {
+  const aTime = new Date(a.data.date).getTime()
+  const bTime = new Date(b.data.date).getTime()
+  return bTime - aTime
+}
+
+export default function Index ({ posts })  {
   posts.sort(sortByDate)
 
   const [pills, rest] = posts.reduce((prev, curr) => {
@@ -52,4 +66,4 @@ export default withPosts(({ posts }) => {
       <Footer />
     </div>
   )
-})
+}
