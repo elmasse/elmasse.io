@@ -6,31 +6,36 @@ import Hero from '../components/hero'
 import Footer from '../components/footer'
 import Grid from '../components/grid'
 
+function sortByDate (a, b) {
+  const aTime = new Date(a.date).getTime()
+  const bTime = new Date(b.date).getTime()
+  return bTime - aTime
+}
+
 export async function getStaticProps () {
-  const { getPosts } = await import('nextein/fetcher')
+  const { getData, getPost } = await import('nextein/fetcher')
+  const data = await getData()
+  
+  data.sort(sortByDate)
+
+  const [pills, rest] = data.reduce((prev, curr) => {
+    prev[curr.category === 'pills' ? 0 : 1].push(curr)
+    return prev
+  }, [[],[]])
+  
+  const [hero, featured, side, ...morePosts] = rest
   return {
     props: {
-      posts: await getPosts()
+      heroPost: await getPost(hero),
+      featuredPost:  await getPost(featured),
+      sidePost: await getPost(side),
+      pills,
+      morePosts
     }
   }
 }
 
-function sortByDate (a, b) {
-  const aTime = new Date(a.data.date).getTime()
-  const bTime = new Date(b.data.date).getTime()
-  return bTime - aTime
-}
-
-export default function Index ({ posts })  {
-  posts.sort(sortByDate)
-
-  const [pills, rest] = posts.reduce((prev, curr) => {
-    prev[curr.data.category === 'pills' ? 0 : 1].push(curr)
-    return prev
-  }, [[],[]])
-  
-  const [heroPost, featured, side, ...morePosts] = rest
-
+export default function Index ({ pills, heroPost, featuredPost, sidePost, morePosts })  {
   return (
     <div className='min-h-screen bg-white dark:bg-black'>
       <Head>
@@ -50,7 +55,7 @@ export default function Index ({ posts })  {
           </h2>
           <div className='w-20 h-1 bg-action'></div>
         </div>
-        <Grid posts={pills} />
+        <Grid posts={pills.map(data => ({ data }))} />
       </div>
 
       <div className='max-w-7xl mx-auto mt-24 mb-32 space-y-8'>
@@ -61,7 +66,7 @@ export default function Index ({ posts })  {
           <div className='w-20 h-1 bg-action'></div>
         </div>
 
-        <Grid featured={featured} side={side} posts={morePosts} />
+        <Grid featured={featuredPost} side={sidePost} posts={morePosts.map(data => ({ data }))} />
       </div>
       <Footer />
     </div>
