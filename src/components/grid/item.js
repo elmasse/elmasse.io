@@ -19,7 +19,7 @@ export const Featured = ({ post }) => {
         <Content className='line-clamp-5 text-lg text-gray-500 dark:text-gray-300 ' {...post} excerpt/>
       </div>
     </Item>
-  );
+  )
 }
 
 export const Side = ({ post }) => {
@@ -38,7 +38,7 @@ export const Side = ({ post }) => {
         <Content className='line-clamp-5 text-lg text-gray-500 dark:text-gray-300' {...post} excerpt/>
       </div>
     </Item>
-  );
+  )
 }
 
 export const Post = ({ post }) => {
@@ -52,7 +52,7 @@ export const Post = ({ post }) => {
         <p className='text-md text-gray-500 dark:text-gray-300 '>{post.data.description}</p>
       </div>
     </Item>
-  );
+  )
 }
 
 const Item = ({ post, children }) => {
@@ -64,5 +64,5 @@ const Item = ({ post, children }) => {
        <a className='text-md uppercase text-action font-extrabold tracking-tight'>read post</a>
       </Link>
     </div>
-  );
+  )
 }

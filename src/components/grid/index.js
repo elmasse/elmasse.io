@@ -17,7 +17,7 @@ export default function Grid({ featured, side, posts }) {
       }
 
       {posts.map(post => (
-        <div key={post.data.url} className='col-span-full md:col-span-4 row-span-4 grid justify-items-stretch'>
+        <div key={post.data.__id} className='col-span-full md:col-span-4 row-span-4 grid justify-items-stretch'>
           <Post post={post} />
         </div>
       ))}
