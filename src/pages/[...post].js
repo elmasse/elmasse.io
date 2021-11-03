@@ -1,3 +1,4 @@
+import { getData, getPost } from 'nextein/fetcher'
 
 import Head from 'next/head'
 import Content from 'nextein/content'
@@ -7,8 +8,8 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 
 export async function getStaticPaths () {
-  const { getData } = await import('nextein/fetcher')
   const data = await getData()
+  
   return {
     paths: data.map(({ category, slug }) => ({
       params: { post: [...category.split('/'), slug] }
@@ -18,11 +19,12 @@ export async function getStaticPaths () {
 }
 
 export async function getStaticProps ({ params }) {
-  const { getPost } = await import('nextein/fetcher')
   const [slug, ...categories] = params.post.reverse()
+  const post = await getPost({ category: categories.join('/'), slug })  
+
   return {
     props: {
-      post: await getPost({ category: categories.join('/'), slug })
+      post 
     }
   }
 }
