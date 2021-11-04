@@ -1,11 +1,8 @@
 ---
-layout: post
 title:  Ext.i18n.Bundle
 description: Internationalization for ExtJS and Sencha Touch
 category: projects
-permalink: /:category?/:name.html
 tags: [sencha-touch, extjs]
-comments: true
 ---
 
 Ext.i18n.Bundle allows you to use properties files (or bundle files) to use them as i18n resources with ExtJS or Sencha Touch projects.

@@ -3,7 +3,6 @@ title: Building a Static Site in your iPad
 description: A step by step guide on creating a nextein site with Play.js.
 tags: [nextein, nextjs, guide]
 category: guides
-permalink: /:category?/:name.html
 ---
 
 There was some hype out there about using your iPad Pro as a replacement for your development computer. If that is doable we'll see in a not so far away future. For now, we can use our iPad Pro along with Play.js to act as our IDE, or JavaScript IDE, to create a Nextein Site. 

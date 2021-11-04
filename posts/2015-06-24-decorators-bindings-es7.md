@@ -1,11 +1,8 @@
 ---
-layout: post
 title:  Decorators with ES7
 description: Exploring Decorators and Bindings
-category: js
+category: guides
 tags: [es7, nodejs, decorators, bind-operator]
-permalink: /:category?/:name.html
-comments: true
 ---
 
 Next ES7 version has some experimental functionality that can be explored today using [babel](https://babeljs.io). Among other functionality, we have access to an experimental feature called **decorators**.

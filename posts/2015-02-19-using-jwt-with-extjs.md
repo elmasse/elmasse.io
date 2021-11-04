@@ -1,9 +1,7 @@
 ---
-layout: post
 title:  Using JWT Tokens with Node & ExtJS 5
-category: nodejs
+category: guides
 tags: [jwt, nodejs, express, api, extjs]
-permalink: /:category?/:name.html
 ---
 
 This post will guide you on how to create a simple **ExtJS 5** application to consume a server side api secured with JWT tokens.
