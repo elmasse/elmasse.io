@@ -1,6 +1,5 @@
-import { getData, getPost } from 'nextein/fetcher'
-
-import { inCategory } from 'nextein/filters'
+import { getDataFilterBy, getPost } from 'nextein/fetcher'
+import { inCategory, inCategories } from 'nextein/filters'
 import Head from 'next/head'
 
 import Navigation from '../components/navigation'
@@ -15,26 +14,21 @@ function sortByDate (a, b) {
 }
 
 export async function getStaticProps () {
-  const data = await getData()
-  data.sort(sortByDate)
+  const entries = await getDataFilterBy(
+    inCategories(['projects', 'guides', 'notes', 'personal'])
+  )
 
-  const [pills, rest] = data.reduce((prev, curr) => {
-    prev[curr.category === 'pills' ? 0 : 1].push(curr)
-    return prev
-  }, [[],[]])
-  
-  const [hero, featured, side, ...morePosts] = rest
-  
-  const result = {
+  const [hero, featured, side, ...morePosts] = entries.sort(sortByDate)
+
+  return {
     props: {
       heroPost: await getPost(hero),
       featuredPost: await getPost(featured),
       sidePost: await getPost(side),
-      pills,
+      pills: await getDataFilterBy(inCategory('pills/*')),
       morePosts
     }
   }
-  return result
 }
 
 export default function Index ({ pills, heroPost, featuredPost, sidePost, morePosts })  {
