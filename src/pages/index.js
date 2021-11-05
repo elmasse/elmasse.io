@@ -7,25 +7,22 @@ import Hero from '../components/hero'
 import Footer from '../components/footer'
 import Grid from '../components/grid'
 
-function sortByDate (a, b) {
-  const aTime = new Date(a.date).getTime()
-  const bTime = new Date(b.date).getTime()
-  return bTime - aTime
-}
 
 export async function getStaticProps () {
   const entries = await getDataFilterBy(
     inCategories(['projects', 'guides', 'notes', 'personal'])
   )
 
-  const [hero, featured, side, ...morePosts] = entries.sort(sortByDate)
+  const pills = await getDataFilterBy(inCategory('pills/*'))
+
+  const [hero, featured, side, ...morePosts] = entries
 
   return {
     props: {
       heroPost: await getPost(hero),
       featuredPost: await getPost(featured),
       sidePost: await getPost(side),
-      pills: await getDataFilterBy(inCategory('pills/*')),
+      pills,
       morePosts
     }
   }
