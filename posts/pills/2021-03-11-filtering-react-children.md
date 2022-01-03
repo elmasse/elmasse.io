@@ -2,7 +2,6 @@
 title: Filtering React Children
 description: A Short Note on applying a filter for React Children.
 tags: [react]
-category: pills
 ---
 
 Trying to filter React children based in a name or type of the child is a tricky option. 

@@ -2,7 +2,7 @@
 title: Add Google Fonts in a tailwindcss plugin
 description: Or from any other Fonts CDN.
 tags: [tailwindcss, plugin]
-category: pills
+published: false
 ---
 
 One of the benefits of creating your own tailwindcss plugin is that you can add your own css to any of the different layers (base, components, utilities).
