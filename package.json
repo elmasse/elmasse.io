@@ -5,8 +5,6 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "export": "next build && next export",
-    "build": "npm run export",
     "analyze": "ANALYZE=true next build"
   },
   "repository": {
@@ -29,7 +27,7 @@
     "autoprefixer": "^10.3.5",
     "date-fns": "^2.24.0",
     "next": "12.0.5",
-    "nextein": "^4.0.0",
+    "nextein": "^4.0.1",
     "nextein-plugin-reading-time": "^1.0.0",
     "postcss": "^8.3.7",
     "prismjs": "^1.25.0",
