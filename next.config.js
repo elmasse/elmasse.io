@@ -4,7 +4,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 module.exports = withNextein(
   withBundleAnalyzer({
-  webpack5: true,
   nextein: {
     plugins: [
       {

@@ -21,21 +21,20 @@
   "dependencies": {
     "@geut/nextein-plugin-title-chicago-style": "^1.1.1",
     "@mapbox/rehype-prism": "^0.8.0",
-    "@next/bundle-analyzer": "^12.1.6",
+    "@next/bundle-analyzer": "^12.2.4",
     "@tailwindcss/line-clamp": "^0.4.0",
-    "@tailwindcss/typography": "^0.5.0",
-    "autoprefixer": "^10.4.7",
-    "date-fns": "^2.28.0",
-    "next": "12.1.6",
-    "nextein": "^4.0.5",
+    "@tailwindcss/typography": "^0.5.4",
+    "autoprefixer": "^10.4.8",
+    "date-fns": "^2.29.1",
+    "next": "^12.2.4",
+    "nextein": "^4.1.0",
     "nextein-plugin-reading-time": "^1.0.0",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.16",
     "prismjs": "^1.28.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rehype-autolink-headings": "^5.0.1",
     "rehype-slug": "^4.0.1",
-    "tailwindcss": "^3.1.4",
-    "webpack": "^5.73.0"
+    "tailwindcss": "^3.1.8"
   }
 }
