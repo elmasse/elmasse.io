@@ -27,7 +27,7 @@
     "autoprefixer": "^10.4.8",
     "date-fns": "^2.29.1",
     "next": "^12.2.4",
-    "nextein": "^4.1.0",
+    "nextein": "^4.1.1",
     "nextein-plugin-reading-time": "^1.0.0",
     "postcss": "^8.4.16",
     "prismjs": "^1.28.0",
