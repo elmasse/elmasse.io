@@ -7,7 +7,7 @@ export default function Footer () {
       <div className='max-w-7xl h-full pt-4 mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex flex-col space-y-8 sm:flex-row sm:space-y-0 sm:space-x-32'>
           <div className='flex-none pb-4'>
-            <Link href='/'><a>elmasse.io</a></Link>
+            <Link href='/'>elmasse.io</Link>
           </div>
 
           <div className='flex-grow'>
@@ -68,5 +68,5 @@ export default function Footer () {
         </div>
       </div>
     </footer>
-  )
+  );
 }
